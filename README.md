@@ -1,2 +1,2 @@
 # MSP430
-基于MSP430LaunchPad
+基于MSP430LaunchPadG2553
