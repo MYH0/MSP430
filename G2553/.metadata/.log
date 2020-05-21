@@ -3527,3 +3527,28 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SESSION 2020-05-21 17:22:03.847 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2020-05-21 17:22:06.847
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2020-05-21 17:22:06.849
+!MESSAGE debugServerDir=C:/CCS/CCS_CODE/ccs/ccs_base/DebugServer
+
+!ENTRY org.eclipse.core.net 4 0 2020-05-21 17:22:23.950
+!MESSAGE WinHttp.GetProxyForUrl for pac failed with error '¾ä±úÎÞЧ' #6.
+
+!ENTRY com.ti.ccstudio.ui 1 0 2020-05-21 17:22:24.636
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/CCS/CCS_CODE/ccs
+	Workspace location: C:/0Practice/Hardware/MSP430/G2553
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2020-05-21 17:22:25.501
+!MESSAGE CCS HTTP adapter started! [ccs.port:5593] - Open 'http://localhost:5593/ide' in web browser to see listing of available APIs...
