@@ -1,0 +1,12 @@
+-----TI-REX started at Wed May 20 2020 21:06:35 GMT+0800 (中国标准时间)
+Wed, 20 May 2020 13:06:37 GMT connect deprecated methodOverride: use method-override npm module instead at app.js:647:21
+ily": "IPv4",
+        "mac": "fa:94:c2:84:21:64",
+        "internal": false
+    }
+]
+removing old log file tirex-2020-04-29.log
+removing old log file tirex-2020-04-30.log
+removing old log file tirex-2020-05-01.log
+-----TI-REX started at Wed May 20 2020 21:06:35 GMT+0800 (中国标准时间)
+TIREX server listening on port 55432

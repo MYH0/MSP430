@@ -1,0 +1,3 @@
+Buildfile generation error occurred..
+This project does not contain a buildable RTSC Configuration (.cfg) file. In order for it to build, this project must contain one RTSC Configuration file that is not excluded from build.
+Build stopped..
