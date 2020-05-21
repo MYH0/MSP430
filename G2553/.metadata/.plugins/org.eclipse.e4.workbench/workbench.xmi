@@ -3,7 +3,7 @@
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.binaryEditor&quot; name=&quot;P2 TimerA Blink LED1.out&quot; tooltip=&quot;P2 TimerA Blink LED1/Debug/P2 TimerA Blink LED1.out&quot;>&#xD;&#xA;&lt;persistable path=&quot;/P2 TimerA Blink LED1/Debug/P2 TimerA Blink LED1.out&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;com.ti.rex.ccsplugin.editor.elementFactory&quot; id=&quot;com.ti.rex.ccsplugin.rexEditor&quot; name=&quot;TI Resource Explorer&quot; tooltip=&quot;TI Resource Explorer&quot;>&#xD;&#xA;&lt;persistable name=&quot;TI Resource Explorer&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.c&quot; tooltip=&quot;P2 TimerA Blink LED1/main.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/P2 TimerA Blink LED1/main.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;GPIO.h&quot; tooltip=&quot;P2 TimerA Blink LED1/GPIO.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/P2 TimerA Blink LED1/GPIO.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Clock.h&quot; tooltip=&quot;P2 TimerA Blink LED1/Clock.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/P2 TimerA Blink LED1/Clock.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;TimerA.h&quot; tooltip=&quot;P2 TimerA Blink LED1/TimerA.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/P2 TimerA Blink LED1/TimerA.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.c&quot; tooltip=&quot;P1 Blink LED2/main.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/P1 Blink LED2/main.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:com.ti.ccstudio.ui.keyBindingScheme</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_XiziIpLkEeq0Z-evFLppOA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_YDXRgZLkEeq0Z-evFLppOA" x="32" y="32" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_XiziIpLkEeq0Z-evFLppOA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_YDXRgZLkEeq0Z-evFLppOA" x="0" y="0" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -64,9 +64,10 @@
           <tags>persp.newWizSC:com.ti.ccstudio.energia.wizards.project.NewSketchWizard</tags>
           <tags>persp.actionSet:com.ti.ccstudio.project.ui.projectActionSet</tags>
           <tags>persp.actionSet:com.ti.ccstudio.project.ui.projectBuildActionSet</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_YVwpEZLkEeq0Z-evFLppOA" selectedElement="_YVwpF5LkEeq0Z-evFLppOA" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_YVwpEZLkEeq0Z-evFLppOA" selectedElement="_YVwpEpLkEeq0Z-evFLppOA" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_YVwpEpLkEeq0Z-evFLppOA" containerData="1371" selectedElement="_YVwpE5LkEeq0Z-evFLppOA">
               <children xsi:type="basic:PartStack" xmi:id="_YVwpE5LkEeq0Z-evFLppOA" elementId="left" containerData="5000" selectedElement="_YVwpFJLkEeq0Z-evFLppOA">
+                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_YVwpFJLkEeq0Z-evFLppOA" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_YVjNsJLkEeq0Z-evFLppOA" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:General</tags>
@@ -361,25 +362,22 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_YVT9IJLkEeq0Z-evFLppOA" elementId="org.eclipse.ui.editorss" selectedElement="_YVT9IZLkEeq0Z-evFLppOA">
-      <children xsi:type="basic:PartStack" xmi:id="_YVT9IZLkEeq0Z-evFLppOA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_41F98JOvEeqEaNKAvt-uBA">
+      <children xsi:type="basic:PartStack" xmi:id="_YVT9IZLkEeq0Z-evFLppOA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_6QSwoJOvEeqEaNKAvt-uBA">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>Maximized</tags>
-        <tags>active</tags>
         <children xsi:type="advanced:Placeholder" xmi:id="_YVs-sJLkEeq0Z-evFLppOA" elementId="org.eclipse.ui.internal.introview" ref="_YDWqcJLkEeq0Z-evFLppOA" closeable="true">
           <tags>View</tags>
           <tags>categoryTag:General</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_41F98JOvEeqEaNKAvt-uBA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="main.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.c&quot; partName=&quot;main.c&quot; title=&quot;main.c&quot; tooltip=&quot;P2 TimerA Blink LED1/main.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/P2 TimerA Blink LED1/main.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;184&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.c&quot; partName=&quot;main.c&quot; title=&quot;main.c&quot; tooltip=&quot;P2 TimerA Blink LED1/main.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/P2 TimerA Blink LED1/main.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_6QSwoJOvEeqEaNKAvt-uBA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TimerA.h" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;TimerA.h&quot; partName=&quot;TimerA.h&quot; title=&quot;TimerA.h&quot; tooltip=&quot;P2 TimerA Blink LED1/TimerA.h&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/P2 TimerA Blink LED1/TimerA.h&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;306&quot; selectionTopPixel=&quot;1350&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;TimerA.h&quot; partName=&quot;TimerA.h&quot; title=&quot;TimerA.h&quot; tooltip=&quot;P2 TimerA Blink LED1/TimerA.h&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/P2 TimerA Blink LED1/TimerA.h&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
@@ -404,6 +402,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; org.eclipse.cdt.ui.cview.groupincludes=&quot;false&quot; org.eclipse.cdt.ui.cview.groupmacros=&quot;false&quot; org.eclipse.cdt.ui.editor.CUChildren=&quot;true&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_YdclcJLkEeq0Z-evFLppOA" elementId="org.eclipse.ui.navigator.ProjectExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -573,7 +573,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_YGgsIJLkEeq0Z-evFLppOA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_VZwk0JqhEeqZW_YOIrmGyA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_XkwqPZLkEeq0Z-evFLppOA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_f0D44JtDEeqJY_6TR1xB0Q" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_XkwqPZLkEeq0Z-evFLppOA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_YGhTMJLkEeq0Z-evFLppOA" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -613,7 +613,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_YGh6QJLkEeq0Z-evFLppOA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_VZ2EYJqhEeqZW_YOIrmGyA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_XkwDNpLkEeq0Z-evFLppOA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_f0J_gJtDEeqJY_6TR1xB0Q" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_XkwDNpLkEeq0Z-evFLppOA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_YGh6QZLkEeq0Z-evFLppOA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
