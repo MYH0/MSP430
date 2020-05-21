@@ -731,3 +731,19 @@ gmake[1]: 'P2 TimerA Blink LED1.out' is up to date.
 gmake[1]: 'P1 Blink LED2.out' is up to date.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project P0 Example ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P0 Example.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P0 Example ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P0 Example.out' is up to date.
+
+**** Build Finished ****
