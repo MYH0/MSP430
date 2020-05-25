@@ -2,4 +2,6 @@
 <section name="Workbench">
 	<section name="com.ti.common.project.ui.internal.preferences.ProductsPreferencePage">
 	</section>
+	<section name="com.ti.ccstudio.project.ui.internal.preferences.CodegenToolsPreferencePage">
+	</section>
 </section>

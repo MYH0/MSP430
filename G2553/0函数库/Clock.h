@@ -1,6 +1,9 @@
 /******************************************************/
 //设定一些全局变量
 /******************************************************/
+typedef unsigned int uint;
+typedef unsigned char uchar;
+
 double CPU_freq = 0;
 
 
@@ -17,14 +20,14 @@ void DCO_Adjust(int dco_x)
 		DCOCTL = CALDCO_8MHZ;
 	if (dco_x == 1)
 		DCOCTL = CALDCO_1MHZ;
-
 }
 
 /******************************************************/
 //设定时钟源MCLK,SMCLK,ACLK
 /******************************************************/
 
-/*初步设定MCLK*/
+//初步设定MCLK
+
 void MCLK_Init(int mclk_a)			 //a为初步设定MCLK，b为MCLK分频的DIVM
 {									
 	if (mclk_a == 16)
@@ -49,7 +52,8 @@ void MCLK_Init(int mclk_a)			 //a为初步设定MCLK，b为MCLK分频的DIVM
 	}
 }
 
-/*设定MCLK分频*/
+//设定MCLK分频
+
 void MCLK_DIV(int divm_b)
 {
 	if (divm_b == 1)
@@ -69,7 +73,8 @@ void MCLK_DIV(int divm_b)
 	}
 }
 
-/*设定SMCLK分频*/
+//设定SMCLK分频
+
 void SMCLK_DIV(int divs_c)
 {
 	if (divs_c == 1)
@@ -80,7 +85,8 @@ void SMCLK_DIV(int divs_c)
 		BCSCTL2 |= DIVS_3;
 }
 
-/*设置ACLK*/
+//设置ACLK
+
 void ACLK_Init(int aclk_d)	//d为选择时钟源，e为设置ACLK分频
 {
 	/*选择时钟源*/
@@ -91,7 +97,8 @@ void ACLK_Init(int aclk_d)	//d为选择时钟源，e为设置ACLK分频
 
 }
 
-/*设定ACLK分频*/
+//设定ACLK分频
+
 void ACLK_DIV(int diva_e)
 {
 	if (diva_e == 1)
@@ -106,6 +113,7 @@ void ACLK_DIV(int diva_e)
 /******************************************************/
 //用1个函数实现上述功能
 /******************************************************/
+
 void BCS_Init(int dco_x0,int mclk_a0,int divm_b0,int divs_c0,int aclk_d0,int diva_e0)
 {
 	DCO_Adjust(dco_x0);
