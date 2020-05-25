@@ -5,4 +5,5 @@ void GPIO_Init()
 {
 	P1SEL &= ~BIT0;  //БоP1.0ОЄI/O
 	P1DIR |= BIT0;	 //БоP1.0ОЄКдіц
+	P1OUT |= BIT0;
 }

@@ -12,14 +12,14 @@ double CPU_freq = 0;
 /******************************************************/
 void DCO_Adjust(int dco_x)
 {
-	if (dco_x == 16)
-		DCOCTL = CALDCO_16MHZ;
-	if (dco_x == 12)
-		DCOCTL = CALDCO_12MHZ;
-	if (dco_x == 8)
-		DCOCTL = CALDCO_8MHZ;
-	if (dco_x == 1)
-		DCOCTL = CALDCO_1MHZ;
+	switch (dco_x)
+	{
+		case 16:DCOCTL = CALDCO_16MHZ; break;
+		case 12:DCOCTL = CALDCO_12MHZ; break;
+		case 8:DCOCTL = CALDCO_8MHZ; break;
+		case 1:DCOCTL = CALDCO_1MHZ; break;
+		default:break;
+	}
 }
 
 /******************************************************/
@@ -29,26 +29,14 @@ void DCO_Adjust(int dco_x)
 //初步设定MCLK
 
 void MCLK_Init(int mclk_a)			 //a为初步设定MCLK，b为MCLK分频的DIVM
-{									
-	if (mclk_a == 16)
+{	
+	switch (mclk_a)
 	{
-		BCSCTL1 = CALBC1_16MHZ;
-		CPU_freq = 16000000;
-	}
-	if (mclk_a == 12)
-	{
-		BCSCTL1 = CALBC1_12MHZ;
-		CPU_freq = 12000000;
-	}
-	if (mclk_a == 8)
-	{
-		BCSCTL1 = CALBC1_8MHZ;
-		CPU_freq = 8000000;
-	}
-	if (mclk_a == 1)
-	{
-		BCSCTL1 = CALBC1_1MHZ;
-		CPU_freq = 1000000;
+		case 16:BCSCTL1 = CALBC1_16MHZ; CPU_freq = 16000000; break;
+		case 12:BCSCTL1 = CALBC1_12MHZ; CPU_freq = 12000000; break;
+		case 8:BCSCTL1 = CALBC1_8MHZ; CPU_freq = 8000000; break;
+		case 1:BCSCTL1 = CALBC1_1MHZ; CPU_freq = 1000000; break;
+		default:break;
 	}
 }
 
@@ -56,20 +44,12 @@ void MCLK_Init(int mclk_a)			 //a为初步设定MCLK，b为MCLK分频的DIVM
 
 void MCLK_DIV(int divm_b)
 {
-	if (divm_b == 1)
+	switch (divm_b)
 	{
-		BCSCTL2 |= DIVM_1;
-		CPU_freq /= 2;
-	}
-	if (divm_b == 2)
-	{
-		BCSCTL2 |= DIVM_2;
-		CPU_freq /= 4;
-	}
-	if (divm_b == 3)
-	{
-		BCSCTL2 |= DIVM_3;
-		CPU_freq /= 8;
+		case 1:BCSCTL2 |= DIVM_1; CPU_freq /= 2; break;
+		case 2:BCSCTL2 |= DIVM_2; CPU_freq /= 4; break;
+		case 3:BCSCTL2 |= DIVM_3; CPU_freq /= 8; break;
+		default:break;
 	}
 }
 
@@ -77,12 +57,13 @@ void MCLK_DIV(int divm_b)
 
 void SMCLK_DIV(int divs_c)
 {
-	if (divs_c == 1)
-		BCSCTL2 |= DIVS_1;
-	if (divs_c == 2)
-		BCSCTL2 |= DIVS_2;
-	if (divs_c == 3)
-		BCSCTL2 |= DIVS_3;
+	switch (divs_c)
+	{
+		case 1:BCSCTL2 |= DIVS_1; break;
+		case 2:BCSCTL2 |= DIVS_2; break;
+		case 3:BCSCTL2 |= DIVS_3; break;
+		default:break;
+	}
 }
 
 //设置ACLK
@@ -94,21 +75,20 @@ void ACLK_Init(int aclk_d)	//d为选择时钟源，e为设置ACLK分频
 	{
 		BCSCTL3 |= LFXT1S_2;
 	}
-
 }
 
 //设定ACLK分频
 
 void ACLK_DIV(int diva_e)
 {
-	if (diva_e == 1)
-		BCSCTL1 |= DIVA_1;
-	if (diva_e == 2)
-		BCSCTL1 |= DIVA_2;
-	if (diva_e == 3)
-		BCSCTL1 |= DIVA_3;
+	switch (diva_e)
+	{
+		case 1:BCSCTL1 |= DIVA_1; break;
+		case 2:BCSCTL1 |= DIVA_2; break;
+		case 3:BCSCTL1 |= DIVA_3; break;
+		default:break;
+	}
 }
-
 
 /******************************************************/
 //用1个函数实现上述功能

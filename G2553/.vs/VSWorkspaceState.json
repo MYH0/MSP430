@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\0函数库",
-    "\\P3 Keyboard_Independent"
+    "\\P2 TimerA Blink LED1"
   ],
-  "SelectedNode": "\\P3 Keyboard_Independent\\Clock.h",
+  "SelectedNode": "\\P2 TimerA Blink LED1\\Clock.h",
   "PreviewInSolutionExplorer": false
 }

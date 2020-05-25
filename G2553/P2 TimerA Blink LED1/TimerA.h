@@ -2,43 +2,48 @@
 //初始化Timer_A
 /***********************************************/
 
-/*设定TimerA的时钟源*/
+//设定TimerA的时钟源
+
 void TA_CLK(int ta_clk)
 {
-	if (ta_clk == 0)		   //使用TACLK
-		TA0CTL |= TASSEL_0;
-	if (ta_clk == 1)		   //使用ACLK
-		TA0CTL |= TASSEL_1;
-	if (ta_clk == 2)		   //使用SMCLK
-		TA0CTL |= TASSEL_2;
-	if (ta_clk == 3)		   //使用INCLK
-		TA0CTL |= TASSEL_3;
+	switch (ta_clk)
+	{
+		case 0:TA0CTL |= TASSEL_0; break;		//使用TACLK
+		case 1:TA0CTL |= TASSEL_1; break;		//使用ACLK
+		case 2:TA0CTL |= TASSEL_2; break;		//使用SMCLK
+		case 3:TA0CTL |= TASSEL_3; break;		//使用INCLK
+		default:break;
+	}
 }
 
-/*设定计数模式*/
+//设定计数模式
+
 void TA_Method(int ta_method)
 {
-	if (ta_method == 0)		  //停止计数
-		TA0CTL |= MC_0;
-	if (ta_method == 1)		  //从0加到TA0CCR0
-		TA0CTL |= MC_1;
-	if (ta_method == 2)		  //从0加到65535
-		TA0CTL |= MC_2;
-	if (ta_method == 3)		  //从0加到TA0CCR0，再减到0
-		TA0CTL |= MC_3;
+	switch (ta_method)
+	{
+		case 0:TA0CTL |= MC_0; break;		//停止计数
+		case 1:TA0CTL |= MC_1; break;		//从0加到TA0CCR0
+		case 2:TA0CTL |= MC_2; break;		//从0加到65535
+		case 3:TA0CTL |= MC_3; break;		//从0加到TA0CCR0，再减到0
+		default:break;
+	}
 }
 
-/*设定时钟分频*/
+//设定时钟分频
+
 void TA_DIV(int ta_div)
 {
-	if (ta_div == 1)
-		TA0CTL |= ID_1;
-	if (ta_div == 2)
-		TA0CTL |= ID_2;
-	if (ta_div == 3)
-		TA0CTL |= ID_3;
+	switch (ta_div)
+	{
+		case 1:TA0CTL |= ID_1; break;
+		case 2:TA0CTL |= ID_2; break;
+		case 3:TA0CTL |= ID_3; break;
+		default:break;
+	}
 }
 
+//整合，初始化TimerA
 
 void TimerA_Init(int time_long,int ta_clk0, int ta_method0,int ta_div0)
 {
@@ -50,16 +55,29 @@ void TimerA_Init(int time_long,int ta_clk0, int ta_method0,int ta_div0)
 	if (ta_div0 != 0)       //设定时钟分频(默认是不用的)
 	{
 		TA_DIV(ta_div0);
-	}
-	
+	}	
 }
 
-/***********************************************/
+/*****************************************************************
+例子：
+1.计数12000,使用VLO-12kHz,从0加到TA0CCR0=12000,分频数=0
+TimerA_Init(12000, 1, 1, 0);
+******************************************************************/
+
+/****************************************************************/
 //Timer_A定时中断
-/***********************************************/
-#pragma vector=TIMER0_A0_VECTOR
-__interrupt void Timer_A()
+/****************************************************************/
+
+//中断后的操作
+void TimerA_Interrupt_Function()
 {
- /***进入中断后的操作***/
 	P1OUT ^= BIT0;
+}
+
+//中断函数
+//TimerA的中断标志位会自动清0，不用管
+#pragma vector=TIMER0_A0_VECTOR
+__interrupt void TimerA_Interrupt()
+{
+	TimerA_Interrupt_Function();
 }

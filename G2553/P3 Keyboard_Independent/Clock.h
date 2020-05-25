@@ -12,14 +12,14 @@ double CPU_freq = 0;
 /******************************************************/
 void DCO_Adjust(int dco_x)
 {
-	if (dco_x == 16)
-		DCOCTL = CALDCO_16MHZ;
-	if (dco_x == 12)
-		DCOCTL = CALDCO_12MHZ;
-	if (dco_x == 8)
-		DCOCTL = CALDCO_8MHZ;
-	if (dco_x == 1)
-		DCOCTL = CALDCO_1MHZ;
+	switch (dco_x)
+	{
+		case 16:DCOCTL = CALDCO_16MHZ; break;
+		case 12:DCOCTL = CALDCO_12MHZ; break;
+		case 8:DCOCTL = CALDCO_8MHZ; break;
+		case 1:DCOCTL = CALDCO_1MHZ; break;
+		default:break;
+	}
 }
 
 /******************************************************/
@@ -29,26 +29,14 @@ void DCO_Adjust(int dco_x)
 //初步设定MCLK
 
 void MCLK_Init(int mclk_a)			 //a为初步设定MCLK，b为MCLK分频的DIVM
-{									
-	if (mclk_a == 16)
+{	
+	switch (mclk_a)
 	{
-		BCSCTL1 = CALBC1_16MHZ;
-		CPU_freq = 16000000;
-	}
-	if (mclk_a == 12)
-	{
-		BCSCTL1 = CALBC1_12MHZ;
-		CPU_freq = 12000000;
-	}
-	if (mclk_a == 8)
-	{
-		BCSCTL1 = CALBC1_8MHZ;
-		CPU_freq = 8000000;
-	}
-	if (mclk_a == 1)
-	{
-		BCSCTL1 = CALBC1_1MHZ;
-		CPU_freq = 1000000;
+		case 16:BCSCTL1 = CALBC1_16MHZ; CPU_freq = 16000000; break;
+		case 12:BCSCTL1 = CALBC1_12MHZ; CPU_freq = 12000000; break;
+		case 8:BCSCTL1 = CALBC1_8MHZ; CPU_freq = 8000000; break;
+		case 1:BCSCTL1 = CALBC1_1MHZ; CPU_freq = 1000000; break;
+		default:break;
 	}
 }
 
