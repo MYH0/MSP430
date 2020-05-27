@@ -120,10 +120,10 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-P2\ TimerA\ Blink\ LED1.out \
+P2\ TimerA\ Blink\ LED1.cof \
 
 EXE_OUTPUTS__QUOTED += \
-"P2 TimerA Blink LED1.out" \
+"P2 TimerA Blink LED1.cof" \
 
 BIN_OUTPUTS += \
 P2\ TimerA\ Blink\ LED1.hex \
@@ -134,20 +134,20 @@ BIN_OUTPUTS__QUOTED += \
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "P2 TimerA Blink LED1.out"
+	@$(MAKE) --no-print-directory -Onone "P2 TimerA Blink LED1.cof" secondary-outputs
 
 # Tool invocations
-P2\ TimerA\ Blink\ LED1.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+P2\ TimerA\ Blink\ LED1.cof: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: MSP430 Linker'
-	"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P2 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P2 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P2 TimerA Blink LED1.out" $(ORDERED_OBJS)
+	"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P2 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P2 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P2 TimerA Blink LED1.cof" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 P2\ TimerA\ Blink\ LED1.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: MSP430 Hex Utility'
-	"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/hex430" --memwidth=8 --romwidth=8 -o "P2 TimerA Blink LED1.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P2 TimerA Blink LED1.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
@@ -158,6 +158,8 @@ clean:
 	-$(RM) "main.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
+
+secondary-outputs: $(BIN_OUTPUTS)
 
 .PHONY: all clean dependents
 .SECONDARY:

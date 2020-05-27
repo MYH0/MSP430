@@ -15,6 +15,7 @@ void GPIO_Init()
 	P1OUT &= ~BIT0;
 	P1DIR &= ~BIT3;
 	P1REN |= BIT3;
+	P1OUT |= BIT3;
 }
 
 /*************************************************/
@@ -36,7 +37,7 @@ void GPIO_Interrupt_Init()
 
 //各IO中断后的功能
 
-void P13_Interrupt()
+void P13_Interrupt_Function()
 {
 	P1OUT ^= (BIT0 + BIT6);
 }
@@ -50,10 +51,10 @@ void GPIO_Interrupt_Scan()
 	Delay_us(500);
 	if ((P1IN & Pin_Interrupt) == 0)		//排除按键抬起造成的抖动
 	{
-		switch (Pin_Interrupt)
+		switch (Pin_Interrupt)				//判断哪个IO口发生中断，并实现相应的功能
 		{
-		case BIT3:P13_Interrupt(); break;
-		default:break;
+			case BIT3:P13_Interrupt_Function(); break;
+			default:break;
 		}
 	}
 }
