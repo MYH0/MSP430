@@ -3,8 +3,8 @@
     "",
     "\\0函数库",
     "\\P2 TimerA Blink LED1",
-    "\\P3 Keyboard_Independent"
+    "\\P4 PWM Control LED2"
   ],
-  "SelectedNode": "\\P2 TimerA Blink LED1\\TimerA.h",
+  "SelectedNode": "\\0函数库\\main.c",
   "PreviewInSolutionExplorer": false
 }

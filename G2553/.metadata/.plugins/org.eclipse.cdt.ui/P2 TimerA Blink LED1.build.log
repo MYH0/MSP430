@@ -3,37 +3,7 @@
 
 "C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
  
-Building target: "P2 TimerA Blink LED1.cof"
-Invoking: MSP430 Linker
-"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P2 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P2 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P2 TimerA Blink LED1.cof" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
-<Linking>
-remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
-remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
-Finished building target: "P2 TimerA Blink LED1.cof"
- 
-Building files: "P2 TimerA Blink LED1.cof"
-Invoking: MSP430 Hex Utility
-"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P2 TimerA Blink LED1.hex"  "P2 TimerA Blink LED1.cof" 
-Translating to Intel format...
-   "P2 TimerA Blink LED1.cof" .text ==> .text
-   "P2 TimerA Blink LED1.cof" .cinit ==> .cinit
-   "P2 TimerA Blink LED1.cof" $fill000 ==> $fill000
-   "P2 TimerA Blink LED1.cof" TRAPINT ==> TRAPINT
-   "P2 TimerA Blink LED1.cof" PORT1 ==> PORT1
-   "P2 TimerA Blink LED1.cof" PORT2 ==> PORT2
-   "P2 TimerA Blink LED1.cof" ADC10 ==> ADC10
-   "P2 TimerA Blink LED1.cof" USCIAB0TX ==> USCIAB0TX
-   "P2 TimerA Blink LED1.cof" USCIAB0RX ==> USCIAB0RX
-   "P2 TimerA Blink LED1.cof" TIMER0_A1 ==> TIMER0_A1
-   "P2 TimerA Blink LED1.cof" TIMER0_A0 ==> TIMER0_A0
-   "P2 TimerA Blink LED1.cof" WDT ==> WDT
-   "P2 TimerA Blink LED1.cof" COMPARATORA ==> COMPARATORA
-   "P2 TimerA Blink LED1.cof" TIMER1_A1 ==> TIMER1_A1
-   "P2 TimerA Blink LED1.cof" TIMER1_A0 ==> TIMER1_A0
-   "P2 TimerA Blink LED1.cof" NMI ==> NMI
-   "P2 TimerA Blink LED1.cof" .reset ==> .reset
-Finished building: "P2 TimerA Blink LED1.cof"
- 
+gmake[1]: 'P2 TimerA Blink LED1.out' is up to date.
+gmake[1]: Nothing to be done for 'secondary-outputs'.
 
 **** Build Finished ****

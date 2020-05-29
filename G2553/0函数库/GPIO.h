@@ -9,12 +9,11 @@ PxOUT=1时：管脚输出H电平、启动上拉电阻
 
 void GPIO_Init()
 {
-	P1SEL &= ~(BIT0 + BIT3 + BIT6);			
-	P1DIR |= BIT0 + BIT6;
-	P1OUT |= BIT6;
-	P1OUT &= ~BIT0;
-	P1DIR &= ~BIT3;
+	P1SEL &= ~BIT3;
 	P1REN |= BIT3;
+	P1OUT |= BIT3;
+	P1DIR &= ~BIT3;
+	
 }
 
 /*************************************************/
@@ -31,24 +30,30 @@ void GPIO_Interrupt_Init()
 {
 	P1IE |= BIT3;
 	P1IES |= BIT3;
-	P1IFG = 0;
 }
 
 //各IO中断后的功能
 
+
 void P13_Interrupt()
 {
-	P1OUT ^= (BIT0 + BIT6);
+	static int bright = 0;				//bright在函数执行完后，不能被清空，应设为静态局部变量
+	bright = bright + 40;				//循环改变占空比
+	if (bright >= 400)					//占空比>40%后，亮度变化不明显
+	{
+		bright = 0;
+	}
+	TA0_PWM_SetPermill(1, bright);		//更新PWM占空比
 }
 
 //IO中断检测
 
 void GPIO_Interrupt_Scan()
 {
-	int Pin_Interrupt = 0;
+	uint Pin_Interrupt = 0;
 	Pin_Interrupt = P1IFG & (~P1DIR);		//只检测输入口造成的中断，排除输出口的影响
 	Delay_us(500);
-	if ((P1IN & Pin_Interrupt) == 0)		//排除按键抬起造成的抖动
+	if ((P1IN & Pin_Interrupt) == 0)		//判断与延时前是否一致
 	{
 		switch (Pin_Interrupt)
 		{

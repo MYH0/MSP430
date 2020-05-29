@@ -3,8 +3,10 @@
 /******************************************************/
 typedef unsigned int uint;
 typedef unsigned char uchar;
+typedef unsigned long int ulint;
+typedef long int lint;
 
-double CPU_freq = 0;
+lint CPU_freq = 0;
 
 
 /******************************************************/
@@ -70,7 +72,7 @@ void SMCLK_DIV(int divs_c)
 
 void ACLK_Init(int aclk_d)	//d为选择时钟源，e为设置ACLK分频
 {
-	/*选择时钟源*/
+	//选择时钟源
 	if (aclk_d == 1)			//d=1时，选VLO为时钟源;d=0时，用外部晶振
 	{
 		BCSCTL3 |= LFXT1S_2;
