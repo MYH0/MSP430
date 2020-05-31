@@ -2,8 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\0函数库",
-    "\\P2 TimerA Blink LED1",
-    "\\P4 PWM Control LED2"
+    "\\P5 Blink_LED1"
   ],
   "SelectedNode": "\\0函数库\\main.c",
   "PreviewInSolutionExplorer": false

@@ -48,9 +48,10 @@ void MCLK_DIV(int divm_b)
 {
 	switch (divm_b)
 	{
-		case 1:BCSCTL2 |= DIVM_1; CPU_freq /= 2; break;
-		case 2:BCSCTL2 |= DIVM_2; CPU_freq /= 4; break;
-		case 3:BCSCTL2 |= DIVM_3; CPU_freq /= 8; break;
+		case 1:BCSCTL2 |= DIVM_0; break;
+		case 2:BCSCTL2 |= DIVM_1; CPU_freq /= 2; break;
+		case 4:BCSCTL2 |= DIVM_2; CPU_freq /= 4; break;
+		case 8:BCSCTL2 |= DIVM_3; CPU_freq /= 8; break;
 		default:break;
 	}
 }
@@ -61,9 +62,10 @@ void SMCLK_DIV(int divs_c)
 {
 	switch (divs_c)
 	{
-		case 1:BCSCTL2 |= DIVS_1; break;
-		case 2:BCSCTL2 |= DIVS_2; break;
-		case 3:BCSCTL2 |= DIVS_3; break;
+		case 1:BCSCTL2 |= DIVS_0; break;
+		case 2:BCSCTL2 |= DIVS_1; break;
+		case 4:BCSCTL2 |= DIVS_2; break;
+		case 8:BCSCTL2 |= DIVS_3; break;
 		default:break;
 	}
 }
@@ -85,9 +87,10 @@ void ACLK_DIV(int diva_e)
 {
 	switch (diva_e)
 	{
-		case 1:BCSCTL1 |= DIVA_1; break;
-		case 2:BCSCTL1 |= DIVA_2; break;
-		case 3:BCSCTL1 |= DIVA_3; break;
+		case 1:BCSCTL1 |= DIVA_0; break;
+		case 2:BCSCTL1 |= DIVA_1; break;
+		case 4:BCSCTL1 |= DIVA_2; break;
+		case 8:BCSCTL1 |= DIVA_3; break;
 		default:break;
 	}
 }
@@ -99,27 +102,26 @@ void ACLK_DIV(int diva_e)
 void BCS_Init(int dco_x0,int mclk_a0,int divm_b0,int divs_c0,int aclk_d0,int diva_e0)
 {
 	DCO_Adjust(dco_x0);
+
 	MCLK_Init(mclk_a0);
-	if (divm_b0 != 0)
-	{
-		MCLK_DIV(divm_b0);
-	}
-	if (divs_c0 != 0)
-	{
-		SMCLK_DIV(divs_c0);
-	}
+
+	MCLK_DIV(divm_b0);
+
+	SMCLK_DIV(divs_c0);
+
 	ACLK_Init(aclk_d0);
-	if (diva_e0 != 0)
-	{
-		ACLK_DIV(diva_e0);
-	}
+
+	ACLK_DIV(diva_e0);
 }
 
 /******************************************************/
 //例子
 /******************************************************
-1.MCLK=16MHz,SMCLK=16MHz,ACLK采用VLO，ACLK=12kHz
-  BCS_Init(16, 16, 0, 0, 1, 0);		
+1.MCLK=16MHz,SMCLK=16MHz,ACLK采用VLO，ACLK=12kHz,1分频
+  BCS_Init(16, 16, 1, 1, 1, 1);		
+2.MCLK=16MHz,SMCLK=16MHz,ACLK采用VLO，ACLK=6kHz，2分频
+  BCS_Init(16, 16, 1, 1, 1, 2);
+3.
 ********************************************************/
 
 /******************************************************/

@@ -9,11 +9,12 @@ PxOUT=1时：管脚输出H电平、启动上拉电阻
 
 void GPIO_Init()
 {
-	P1SEL &= ~BIT3;
-	P1REN |= BIT3;
-	P1OUT |= BIT3;
-	P1DIR &= ~BIT3;
-	
+	P1SEL &= ~BIT0;
+//	P1REN |= BIT3;
+//	P1OUT |= BIT3;
+	P1DIR |= BIT0;
+//	P1OUT |= BIT3;
+
 }
 
 /*************************************************/
@@ -34,17 +35,12 @@ void GPIO_Interrupt_Init()
 
 //各IO中断后的功能
 
-int bright = 0;
+//P13中断
 
-void P13_Interrupt()
+void P13_Interrupt_Function()
 {
-//	static int bright = 0;				//bright在函数执行完后，不能被清空，应设为静态局部变量
-	bright = bright + 40;				//循环改变占空比
-	if (bright >= 400)					//占空比>40%后，亮度变化不明显
-	{
-		bright = 0;
-	}
-	TA0_PWM_SetPermill(1, bright);		//更新PWM占空比
+
+
 }
 
 //IO中断检测
@@ -58,13 +54,15 @@ void GPIO_Interrupt_Scan()
 	{
 		switch (Pin_Interrupt)
 		{
-		case BIT3:P13_Interrupt(); break;
-		default:break;
+			case BIT3:P13_Interrupt_Function(); break;
+
+			default:break;
 		}
 	}
 }
 
 //设定IO中断函数
+
 #pragma vector=PORT1_VECTOR
 __interrupt void P1_Interrupt()
 {
