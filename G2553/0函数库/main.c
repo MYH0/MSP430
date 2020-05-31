@@ -1,13 +1,16 @@
-#include"MSP430G2553.h"
+#include"msp430g2553.h"
 #include"Clock.h"
+#include"Watching_Dog.h"
 
 #include"GPIO.h"
 
 void main() 
 {
-	WDTCTL = WDTPW + WDTHOLD;	            //นุนท
+    WD_STOP();	            //นุนท
 
     BCS_Init(16, 16, 1, 1, 1, 1);
+
+
 
     GPIO_Init();	
 
