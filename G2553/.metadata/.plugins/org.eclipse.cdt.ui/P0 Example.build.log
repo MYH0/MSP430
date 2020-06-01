@@ -4,5 +4,27 @@
 "C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
  
 gmake[1]: 'P0 Example.out' is up to date.
+Building files: "P0 Example.out"
+Invoking: MSP430 Hex Utility
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P0 Example.hex"  "P0 Example.out" 
+Translating to Intel format...
+   "P0 Example.out" .text ==> .text
+   "P0 Example.out" $fill000 ==> $fill000
+   "P0 Example.out" TRAPINT ==> TRAPINT
+   "P0 Example.out" PORT1 ==> PORT1
+   "P0 Example.out" PORT2 ==> PORT2
+   "P0 Example.out" ADC10 ==> ADC10
+   "P0 Example.out" USCIAB0TX ==> USCIAB0TX
+   "P0 Example.out" USCIAB0RX ==> USCIAB0RX
+   "P0 Example.out" TIMER0_A1 ==> TIMER0_A1
+   "P0 Example.out" TIMER0_A0 ==> TIMER0_A0
+   "P0 Example.out" WDT ==> WDT
+   "P0 Example.out" COMPARATORA ==> COMPARATORA
+   "P0 Example.out" TIMER1_A1 ==> TIMER1_A1
+   "P0 Example.out" TIMER1_A0 ==> TIMER1_A0
+   "P0 Example.out" NMI ==> NMI
+   "P0 Example.out" .reset ==> .reset
+Finished building: "P0 Example.out"
+ 
 
 **** Build Finished ****

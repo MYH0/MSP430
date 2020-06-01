@@ -257,7 +257,7 @@ void TA1_PWM_OUT2(int Mode2)
 
 void TA1_PWM_Init(char ta1_clk, int ta1_div, int Mode1, int Mode2, int Period)
 {
-    TA1CTL = 0;                                                                   // 清除以前设置
+    //TA1CTL = 0;                                                                   // 清除以前设置
     TA1_CLK(ta1_clk);
     TA1_DIV(ta1_div);
     TA1_PWM_MODE(Mode1);

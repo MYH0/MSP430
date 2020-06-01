@@ -134,7 +134,7 @@ BIN_OUTPUTS__QUOTED += \
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "P0 Example.out"
+	@$(MAKE) --no-print-directory -Onone "P0 Example.out" secondary-outputs
 
 # Tool invocations
 P0\ Example.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
@@ -147,7 +147,7 @@ P0\ Example.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 P0\ Example.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: MSP430 Hex Utility'
-	"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/hex430" --memwidth=8 --romwidth=8 -o "P0 Example.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P0 Example.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
@@ -158,6 +158,8 @@ clean:
 	-$(RM) "blink.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
+
+secondary-outputs: $(BIN_OUTPUTS)
 
 .PHONY: all clean dependents
 .SECONDARY:
