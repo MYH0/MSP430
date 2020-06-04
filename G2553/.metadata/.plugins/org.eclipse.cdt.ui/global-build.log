@@ -14232,3 +14232,325 @@ Finished building target: "P7 WD PWM-Breath LED1.out"
 gmake[1]: 'P7 WD PWM-Breath LED1.out' is up to date.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project P7 WD PWM-Breath LED1 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -s -O 
+ 
+MSP430 Compiler: "../main.c"
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 86: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 176: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TA_PWM.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 148: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 149: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 150: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 150: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 159: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 159: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 161: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 161: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 169: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 169: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 171: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 171: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 284: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 297: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 298: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 299: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 299: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 308: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 308: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 310: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 310: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 318: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 318: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 320: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 320: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Watching_Dog.h", line 41: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 73: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\GPIO.h", line 69: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+ 
+MSP430 Linker: "P7 WD PWM-Breath LED1.out"
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P7 WD PWM-Breath LED1 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -s -O 
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P7 WD PWM-Breath LED1 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -s -O 
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P7 WD PWM-Breath LED1 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -s -O 
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P6 WD NMI Interrupt For LED2 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P6 WD NMI Interrupt For LED2.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P6 WD NMI Interrupt For LED2 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P6 WD NMI Interrupt For LED2.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Release for project P6 WD NMI Interrupt For LED2 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O2 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P6 WD NMI Interrupt For LED2" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "../main.c"   ==> main
+   "..\Watching_Dog.h"   ==> WD_STOP
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "..\Watching_Dog.h"   ==> WDT_Interrupt_Function
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\GPIO.h"   ==> P13_Interrupt_Function
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Function
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Watching_Dog.h", line 41: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 73: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\GPIO.h", line 69: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P6 WD NMI Interrupt For LED2.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O2 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P6 WD NMI Interrupt For LED2.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P6 WD NMI Interrupt For LED2_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P6 WD NMI Interrupt For LED2.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P6 WD NMI Interrupt For LED2.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Release for project P7 WD PWM-Breath LED1 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O2 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P7 WD PWM-Breath LED1" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WD_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\TimerA.h"   ==> TA0_CLK
+   "..\TimerA.h"   ==> TA0_DIV
+   "..\TimerA.h"   ==> TA0_Method
+   "..\TA_PWM.h"   ==> TA0_PWM_MODE
+   "..\TA_PWM.h"   ==> TA0_PWM_OUT1
+   "..\TA_PWM.h"   ==> TA0_PWM_OUT2
+   "..\TA_PWM.h"   ==> TA0_PWM_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\TA_PWM.h"   ==> TA0_PWM_SetPermill
+   "..\TA_PWM.h"   ==> T0_PWM_Breath_Bright
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\TA_PWM.h"   ==> TA1_PWM_SetPermill
+   "..\TA_PWM.h"   ==> TA1_PWM_OUT2
+   "..\TA_PWM.h"   ==> TA1_PWM_OUT1
+   "..\TimerA.h"   ==> TA1_Method
+   "..\TA_PWM.h"   ==> TA1_PWM_MODE
+   "..\TimerA.h"   ==> TA1_CLK
+   "..\TimerA.h"   ==> TA1_DIV
+   "..\TA_PWM.h"   ==> TA1_PWM_Init
+   "..\TimerA.h"   ==> TA1_Interrupt_Function
+   "..\TimerA.h"   ==> TA1_Interrupt
+   "..\TimerA.h"   ==> TA1_Init
+   "..\TimerA.h"   ==> TA0_Interrupt_Function
+   "..\TimerA.h"   ==> TA0_Interrupt
+   "..\TimerA.h"   ==> TA0_Init
+   "..\TA_PWM.h"   ==> T1_PWM_Breath_Bright
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\GPIO.h"   ==> P13_Interrupt_Function
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Function
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 86: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 176: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TA_PWM.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 148: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 149: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 150: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 150: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 159: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 159: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 161: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 161: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 169: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 169: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 171: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 171: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 284: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 297: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 298: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 299: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 299: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 308: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 308: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 310: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 310: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 318: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 318: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 320: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 320: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Watching_Dog.h", line 41: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 73: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\GPIO.h", line 69: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P7 WD PWM-Breath LED1.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O2 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P7 WD PWM-Breath LED1.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P7 WD PWM-Breath LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P7 WD PWM-Breath LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P7 WD PWM-Breath LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Release for project P7 WD PWM-Breath LED1 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P7 WD PWM-Breath LED1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Release for project P7 WD PWM-Breath LED1 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P7 WD PWM-Breath LED1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P7 WD PWM-Breath LED1 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P7 WD PWM-Breath LED1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P7 WD PWM-Breath LED1 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P7 WD PWM-Breath LED1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P7 WD PWM-Breath LED1 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P7 WD PWM-Breath LED1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P7 WD PWM-Breath LED1 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P7 WD PWM-Breath LED1.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P7 WD PWM-Breath LED1 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P7 WD PWM-Breath LED1.out' is up to date.
+
+**** Build Finished ****

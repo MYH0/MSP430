@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="861"/>
-		<item key="DIALOG_Y_ORIGIN" value="156"/>
+		<item key="DIALOG_X_ORIGIN" value="264"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
 	</section>
 	<section name="org.eclipse.ui.preferences.keysPreferencePage">
 	</section>
@@ -11,5 +11,9 @@
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.ui.Basic"/>
 		</list>
+	</section>
+	<section name="targetStatusBarPreferencePage">
+		<item key="targetStatusBarPreferencePage.processorId" value="TMS320C56"/>
+		<item key="targetStatusBarPreferencePage.processorType" value="DSK"/>
 	</section>
 </section>
