@@ -1,8 +1,6 @@
 #include<msp430g2553.h>
 #include"Clock.h"
-
 #include"GPIO.h"
-
 #include"Watching_Dog.h"
 
 

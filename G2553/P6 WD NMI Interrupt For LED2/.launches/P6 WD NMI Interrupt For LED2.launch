@@ -4,7 +4,7 @@
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROGRAM.MSP430G2553.ccxml.TI MSP430 USB1/MSP430" value="${build_artifact:P6 WD NMI Interrupt For LED2}"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT.MSP430G2553.ccxml.TI MSP430 USB1/MSP430" value="P6 WD NMI Interrupt For LED2"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_TARGET_CONFIG" value="${target_config_active_default:P6 WD NMI Interrupt For LED2}"/>
-<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.MSP430G2553.ccxml.TI MSP430 USB1/MSP430" value="C:\0Practice\Hardware\MSP430\G2553\P6 WD NMI Interrupt For LED2\Debug\P6 WD NMI Interrupt For LED2.out"/>
+<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.MSP430G2553.ccxml.TI MSP430 USB1/MSP430" value="C:\0Practice\Hardware\MSP430\G2553\P6 WD NMI Interrupt For LED2\Release\P6 WD NMI Interrupt For LED2.out"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/P6 WD NMI Interrupt For LED2"/>
 </listAttribute>

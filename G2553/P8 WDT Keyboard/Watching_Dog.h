@@ -29,7 +29,7 @@ void WDTimer_Init()
 
 void WDT_Interrupt_Function()
 {
-    GPIO_Interrupt_Scan_WDT();
+    WDT_Interrupt_Key_Scan();
 
 }
 

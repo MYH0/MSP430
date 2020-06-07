@@ -127,7 +127,6 @@ void TA0_PWM_Init(char ta0_clk,int ta0_div,int Mode1,int Mode2, int Period)
 * 范    例: TA0_PWM_SetPermill(1,300)设置PWM通道1方波的占空比为30.0%
             TA0_PWM_SetPermill(2,,825)设置PWM通道2方波的占空比为82.5%
  ******************************************************************************************************/
-
 void TA0_PWM_SetPermill(int Channel,lint Duty)
 {
     int mode = 0;
@@ -183,11 +182,11 @@ void TA1_PWM_MODE(int Mode1)
 {
     switch (Mode1)
     {
-    case 3:
-    case 7:TA1_Method(1); break;                 //普通PWM
-    case 2:
-    case 6:TA1_Method(3); break;                 //死区PWM
-    default: break;
+        case 3:
+        case 7:TA1_Method(1); break;                 //普通PWM
+        case 2:
+        case 6:TA1_Method(3); break;                 //死区PWM
+        default: break;
     }
 }
 
@@ -209,11 +208,11 @@ void TA1_PWM_OUT1(int Mode1)
 {
     switch (Mode1)
     {
-    case 3:TA1CCTL1 = OUTMOD_3; TA01_P16_PWM_OUT; break;
-    case 7:TA1CCTL1 = OUTMOD_7; TA01_P16_PWM_OUT; break;
-    case 6:TA1CCTL1 = OUTMOD_6; TA01_P16_PWM_OUT; break;
-    case 0:TA01_P16_PWM_OFF; break;                                                              //如果设置为禁用
-    default:TA01_P16_PWM_OFF; break;                                                                   //TA0.1恢复为普通IO口 
+        case 3:TA1CCTL1 = OUTMOD_3; TA01_P16_PWM_OUT; break;
+        case 7:TA1CCTL1 = OUTMOD_7; TA01_P16_PWM_OUT; break;
+        case 6:TA1CCTL1 = OUTMOD_6; TA01_P16_PWM_OUT; break;
+        case 0:TA01_P16_PWM_OFF; break;                                                              //如果设置为禁用
+        default:TA01_P16_PWM_OFF; break;                                                                   //TA0.1恢复为普通IO口 
     }
 }
 
@@ -223,17 +222,17 @@ void TA1_PWM_OUT2(int Mode2)
 {
     switch (Mode2)
     {
-    case 3:TA1CCTL2 = OUTMOD_3; TA00_P15_PWM_OUT; break;
-    case 7:TA1CCTL2 = OUTMOD_7; TA00_P15_PWM_OUT;  break;
-    case 2:TA1CCTL2 = OUTMOD_2; TA00_P15_PWM_OUT; break;
-    case 0:TA00_P15_PWM_OFF; break;
-    default:break;
+        case 3:TA1CCTL2 = OUTMOD_3; TA00_P15_PWM_OUT; break;
+        case 7:TA1CCTL2 = OUTMOD_7; TA00_P15_PWM_OUT;  break;
+        case 2:TA1CCTL2 = OUTMOD_2; TA00_P15_PWM_OUT; break;
+        case 0:TA00_P15_PWM_OFF; break;
+        default:break;
     }
 }
 
 //4-3.最终以TA0为定时器，初始化
 //注意：TA0CCR0应<65535
-//     死区周期为TA0CCR0的两倍
+//死区周期为TA0CCR0的两倍
 
 void TA1_PWM_Init(char ta1_clk, int ta1_div, int Mode1, int Mode2, int Period)
 {
@@ -257,6 +256,7 @@ void TA1_PWM_Init(char ta1_clk, int ta1_div, int Mode1, int Mode2, int Period)
 * 范    例: TA_PWM_SetPermill(1,300)设置PWM通道1方波的占空比为30.0%
                TA_PWM_SetPermill(2,,825)设置PWM通道2方波的占空比为82.5%
  ******************************************************************************************************/
+
 void TA1_PWM_SetPermill(int Channel, lint Duty)
 {
     int mode = 0;
@@ -264,43 +264,42 @@ void TA1_PWM_SetPermill(int Channel, lint Duty)
     DeadPermill = ((DEADTIME * 1000) / TA1CCR0);       //将绝对死区时间换算成千分比死区时间
     switch (Channel)                                   //先判断出通道的工作模式
     {
-    case 1:mode = (TA1CCTL1 & 0x00e0) >> 5; break;  //读取输出模式，OUT_MOD0位于5-7位
-    case 2:mode = (TA1CCTL2 & 0x00e0) >> 5; break;  //读取输出模式，OUT_MOD1位于5-7位           
-    default:break;
+        case 1:mode = (TA1CCTL1 & 0x00e0) >> 5; break;  //读取输出模式，OUT_MOD0位于5-7位
+        case 2:mode = (TA1CCTL2 & 0x00e0) >> 5; break;  //读取输出模式，OUT_MOD1位于5-7位           
+        default:break;
     }
 
     switch (mode)        //根据模式设定TACCRx
     {
-    case 2:
-    case 6:         //死区模式2,6时，需要判断修正死区时间，且同时设定TA0CCR1/2 的值
-    {
-        if ((1000 - 2 * Duty) <= DeadPermill)           //预留死区时间
-            Duty = (1000 - DeadPermill) / 2;
-        TA1CCR1 = Duty * TA1CCR0 / 1000;
-        TA1CCR2 = TA1CCR0 - TA1CCR1;
-        break;
-    }
-    case 7:
-    {
-        if (Duty > 1000)
-            Duty = 1000;
-        if (Channel == 1)
-            TA1CCR1 = TA1CCR0 * Duty / 1000;
-        if (Channel == 2)
-            TA1CCR2 = TA1CCR0 * Duty / 1000;
-        break;
-    }
-    case 3:     //占空比一律为正脉宽，所以需要 TA0CCR0减去占空比
-    {
-        if (Duty > 1000)
-            Duty = 1000;
-        if (Channel == 1)
-            TA1CCR1 = TA1CCR0 * (1 - Duty / 1000);
-        if (Channel == 2)
-            TA1CCR2 = TA1CCR0 * (1 - Duty / 1000);
-        break;
-    }
-    default: break;
+        case 2:
+        case 6:         //死区模式2,6时，需要判断修正死区时间，且同时设定TA0CCR1/2 的值
+            {
+                if ((1000 - 2 * Duty) <= DeadPermill)           //预留死区时间
+                    Duty = (1000 - DeadPermill) / 2;
+                TA1CCR1 = Duty * TA1CCR0 / 1000;
+                TA1CCR2 = TA1CCR0 - TA1CCR1;
+                break;
+            }
+        case 7:
+            {
+                if (Duty > 1000)
+                    Duty = 1000;
+                if (Channel == 1)
+                    TA1CCR1 = TA1CCR0 * Duty / 1000;
+                if (Channel == 2)
+                    TA1CCR2 = TA1CCR0 * Duty / 1000;
+                break;
+            }
+        case 3:     //占空比一律为正脉宽，所以需要 TA0CCR0减去占空比
+            {
+                if (Duty > 1000)
+                    Duty = 1000;
+                if (Channel == 1)
+                    TA1CCR1 = TA1CCR0 * (1 - Duty / 1000);
+                if (Channel == 2)
+                    TA1CCR2 = TA1CCR0 * (1 - Duty / 1000);
+                break;
+            }
+        default: break;
     }
 }
-

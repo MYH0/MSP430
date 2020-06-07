@@ -74,7 +74,7 @@ TA0_Init('A', 1, 1, 12000);
 
 void TA0_Interrupt_Function()
 {
-	P1OUT ^= BIT0;
+	
 }
 
 //2-2.中断函数
@@ -151,7 +151,6 @@ void TA1_Init(char ta1_clk0, int ta1_div0, int ta1_method0, int time_long)
 	TA1CCR0 = time_long;    //设定阈值初始值
 }
 
-
 /*****************************************************************
 例子：
 1.计数12000,使用VLO-ACLK-12kHz,从0加到TA0CCR0=12000,1分频
@@ -164,7 +163,7 @@ TA1_Init('A', 1, 1, 12000);
 
 void TA1_Interrupt_Function()
 {
-	P1OUT ^= BIT0;
+	
 }
 
 //2-2.中断函数
