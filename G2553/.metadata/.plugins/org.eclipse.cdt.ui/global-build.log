@@ -16618,3 +16618,1941 @@ Finished building target: "P8 WDT Keyboard.out"
 gmake[1]: 'P8 WDT Keyboard.out' is up to date.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long&Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long&Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WD_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short_Function
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt_Function
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\GPIO.h", line 207: warning #1-D: last line of file ends without a newline
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long&Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long&Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long&Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long&Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long&Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long&Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long&Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WD_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short_Function
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt_Function
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long&Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long&Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long&Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long&Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long&Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long&Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long&Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long&Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long&Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long&Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long&Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long&Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long&Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long&Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O0 --opt_for_speed=0 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long&Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WD_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short_Function
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt_Function
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long&Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O0 --opt_for_speed=0 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long&Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long&Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long&Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long&Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P8 WDT Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P8 WDT Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long&Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long&Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P3 Keyboard_Independent ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P3 Keyboard_Independent.out' is up to date.
+gmake[1]: Nothing to be done for 'secondary-outputs'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long&Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long&Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P9 WDT Long&Short Keyboard.hex"  "P9 WDT Long&Short Keyboard.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WD_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short_Function
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt_Function
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WD_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short_Function
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt_Function
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WD_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short_Function
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WD_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short_Function
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short_Function
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short_Function
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short_Function
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short_Function
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short_Function
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short_Function
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13_Function
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> Key_P13
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\GPIO.h", line 129: warning #225-D: function "Key_P13_Function" declared implicitly
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P9 WDT Long-Short Keyboard" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.0.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "..\Watching_Dog.h"   ==> WDT_STOP
+   "..\Clock.h"   ==> DCO_Adjust
+   "..\Clock.h"   ==> MCLK_Init
+   "..\Clock.h"   ==> MCLK_DIV
+   "..\Clock.h"   ==> SMCLK_DIV
+   "..\Clock.h"   ==> ACLK_Init
+   "..\Clock.h"   ==> ACLK_DIV
+   "..\Clock.h"   ==> BCS_Init
+   "..\GPIO.h"   ==> GPIO_LED_Init
+   "..\GPIO.h"   ==> GPIO_Key_Init
+   "..\GPIO.h"   ==> GPIO_Init
+   "..\Watching_Dog.h"   ==> WDTimer_Init
+   "../main.c"   ==> main
+   "..\GPIO.h"   ==> Key_P13_Short
+   "..\GPIO.h"   ==> Key_Long_Scan
+   "..\GPIO.h"   ==> Key_P13_Long
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan_SM
+   "..\GPIO.h"   ==> Key_P13
+   "..\GPIO.h"   ==> WDT_Interrupt_Key_Scan
+   "..\Watching_Dog.h"   ==> WDT_Interrupt
+   "..\Clock.h"   ==> Delay_us
+   "..\GPIO.h"   ==> GPIO_Interrupt_Scan
+   "..\GPIO.h"   ==> P1_Interrupt
+   "..\Watching_Dog.h"   ==> NMI_Interrupt_Init
+   "..\Watching_Dog.h"   ==> NMI_Interrupt
+   "..\Watching_Dog.h"   ==> Key_RST_Function
+   "..\GPIO.h"   ==> GPIO_Interrupt_Init
+   "..\Clock.h"   ==> Delay_ms
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P9 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P9 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P9 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P9 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P9 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****

@@ -4,7 +4,7 @@
 
 //1.关狗*****************************************************************
 
-void WD_STOP()
+void WDT_STOP()
 {
     WDTCTL = WDTPW + WDTHOLD;
 }
@@ -16,7 +16,7 @@ void WD_STOP()
 
 void WDTimer_Init()
 {
-    WDTCTL = WDT_ADLY_250;
+    WDTCTL = WDT_ADLY_1_9;
     IE1 |= WDTIE;                        //允许WDT中断
 
 }
@@ -28,7 +28,7 @@ void WDTimer_Init()
 
 void WDT_Interrupt_Function()
 {
-    
+    WDT_Interrupt_Key_Scan_SM();
 }
 
 //2-2-2.进入WDTimer中断

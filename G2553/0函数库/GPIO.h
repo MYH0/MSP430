@@ -93,6 +93,7 @@ __interrupt void P1_Interrupt()
 }
 
 //按键检测-WDTimer中断(无阻塞),需要后置Watching_Dog文件*********************************
+//WDTimer设定在16~20ms左右比较好
 
 void WDT_Interrupt_Key_Scan()
 {
