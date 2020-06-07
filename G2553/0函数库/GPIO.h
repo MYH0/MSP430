@@ -9,11 +9,17 @@ PxOUT=1时：管脚输出H电平、启动上拉电阻
 
 void GPIO_Init()
 {
-	P1SEL &= ~BIT0;
-//	P1REN |= BIT3;
-//	P1OUT |= BIT3;
-	P1DIR |= BIT0;
-//	P1OUT |= BIT3;
+	//针对LED的IO配置
+	P1SEL &= ~(BIT0 + BIT6);
+	P1DIR |= BIT0 + BIT6;
+	P1OUT |= BIT0;
+	P1OUT &= ~BIT6;
+
+	//针对Key的IO配置
+	P1SEL &= ~(BIT3);
+	P1DIR &= ~(BIT3);
+	P1REN |= BIT3;
+	P1OUT |= BIT3;
 
 }
 
@@ -39,11 +45,11 @@ void GPIO_Interrupt_Init()
 
 void P13_Interrupt_Function()
 {
-
-
+	P1OUT ^= BIT0;
+	P1OUT ^= BIT6;
 }
 
-//IO中断检测
+//IO中断检测(有阻塞)
 
 void GPIO_Interrupt_Scan()
 {
@@ -59,6 +65,23 @@ void GPIO_Interrupt_Scan()
 			default:break;
 		}
 	}
+}
+
+//IO中断检测(无阻塞),使用WDTimer,需要前置Watching_Dog文件
+
+void GPIO_Interrupt_Scan_WDT()
+{
+	static uchar Key_Now = 0;
+	uchar Key_Past = 0;
+	Key_Past = Key_Now;
+
+	if ((P1IN & BIT3) == 0)
+		Key_Now = 0;
+	else
+		Key_Now = 1;
+
+	if ((Key_Past == 1) && (Key_Now == 0))
+		P13_Interrupt_Function();
 }
 
 //设定IO中断函数

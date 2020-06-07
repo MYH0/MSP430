@@ -1,4 +1,4 @@
-!SESSION 2020-05-29 00:10:30.300 -----------------------------------------------
+!SESSION 2020-06-06 23:48:08.494 -----------------------------------------------
 eclipse.buildId=4.14.0.I20191210-0610
 java.version=1.8.0_144
 java.vendor=Oracle Corporation
@@ -7,9 +7,9 @@ Framework arguments:  -product com.ti.ccstudio.branding.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
 
 This is a continuation of log file C:\0Practice\Hardware\MSP430\G2553\.metadata\.bak_5.log
-Created Time: 2020-05-29 03:03:06.134
+Created Time: 2020-06-07 01:25:07.937
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.135
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:07.937
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -20,16 +20,21 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLineIndex(StyledText.java:4303)
+	at org.eclipse.swt.custom.StyledText.handlePaint(StyledText.java:6249)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5800)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4175)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1081)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1563)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4816)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4827)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -52,8 +57,8 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.140
-!MESSAGE Unhandled event loop exception
+!ENTRY org.eclipse.text 4 2 2020-06-07 01:25:08.042
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.text".
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.SWT.error(SWT.java:4701)
@@ -63,16 +68,20 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLinePixel(StyledText.java:4274)
+	at org.eclipse.swt.custom.StyledText.handleTextChanging(StyledText.java:6424)
+	at org.eclipse.swt.custom.StyledText$5.textChanging(StyledText.java:5770)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.fireTextChanging(DefaultDocumentAdapter.java:360)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.documentAboutToBeChanged(DefaultDocumentAdapter.java:277)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentAboutToBeChanged(AbstractDocument.java:636)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1096)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1123)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.updateUI(BuildConsolePartitioner.java:274)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4090)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3207)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -95,8 +104,8 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.146
-!MESSAGE Unhandled event loop exception
+!ENTRY org.eclipse.text 4 2 2020-06-07 01:25:08.043
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.text".
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.SWT.error(SWT.java:4701)
@@ -106,16 +115,25 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLineIndex(StyledText.java:4303)
+	at org.eclipse.swt.custom.StyledText.redraw(StyledText.java:7652)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter$StyledTextPaintListener.redrawScrollBars(StyledTextThemedScrollBarAdapter.java:648)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter$AbstractStyledTextScrollHandler.checkNeedUpdate(StyledTextThemedScrollBarAdapter.java:154)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter$AbstractStyledTextScrollHandler.textChanged(StyledTextThemedScrollBarAdapter.java:171)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.fireTextChanged(DefaultDocumentAdapter.java:315)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.documentChanged(DefaultDocumentAdapter.java:258)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged2(AbstractDocument.java:739)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:716)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:700)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentChanged(AbstractDocument.java:774)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1105)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1123)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.updateUI(BuildConsolePartitioner.java:274)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4090)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3207)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -138,8 +156,8 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.155
-!MESSAGE Unhandled event loop exception
+!ENTRY org.eclipse.text 4 2 2020-06-07 01:25:08.044
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.text".
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.SWT.error(SWT.java:4701)
@@ -149,16 +167,24 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLinePixel(StyledText.java:4274)
+	at org.eclipse.swt.custom.StyledText.getPointAtOffset(StyledText.java:5602)
+	at org.eclipse.swt.custom.StyledText.setCaretLocation(StyledText.java:8710)
+	at org.eclipse.swt.custom.StyledText.setCaretOffset(StyledText.java:8836)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleViewer.revealEndOfDocument(BuildConsoleViewer.java:121)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleViewer$InternalDocumentListener.documentChanged(BuildConsoleViewer.java:58)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged2(AbstractDocument.java:747)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:716)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:700)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentChanged(AbstractDocument.java:774)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1105)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1123)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.updateUI(BuildConsolePartitioner.java:274)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4090)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3207)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -181,7 +207,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.162
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:08.046
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -192,16 +218,21 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLineIndex(StyledText.java:4303)
+	at org.eclipse.swt.custom.StyledText.handlePaint(StyledText.java:6249)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5800)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4175)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1081)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1563)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4816)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4827)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -224,8 +255,8 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.170
-!MESSAGE Unhandled event loop exception
+!ENTRY org.eclipse.text 4 2 2020-06-07 01:25:08.404
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.text".
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.SWT.error(SWT.java:4701)
@@ -235,16 +266,20 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLinePixel(StyledText.java:4274)
+	at org.eclipse.swt.custom.StyledText.handleTextChanging(StyledText.java:6424)
+	at org.eclipse.swt.custom.StyledText$5.textChanging(StyledText.java:5770)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.fireTextChanging(DefaultDocumentAdapter.java:360)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.documentAboutToBeChanged(DefaultDocumentAdapter.java:277)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentAboutToBeChanged(AbstractDocument.java:636)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1096)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1123)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.updateUI(BuildConsolePartitioner.java:274)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4090)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3207)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -267,8 +302,8 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.178
-!MESSAGE Unhandled event loop exception
+!ENTRY org.eclipse.text 4 2 2020-06-07 01:25:08.405
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.text".
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.SWT.error(SWT.java:4701)
@@ -278,16 +313,25 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLineIndex(StyledText.java:4303)
+	at org.eclipse.swt.custom.StyledText.redraw(StyledText.java:7652)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter$StyledTextPaintListener.redrawScrollBars(StyledTextThemedScrollBarAdapter.java:648)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter$AbstractStyledTextScrollHandler.checkNeedUpdate(StyledTextThemedScrollBarAdapter.java:154)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter$AbstractStyledTextScrollHandler.textChanged(StyledTextThemedScrollBarAdapter.java:171)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.fireTextChanged(DefaultDocumentAdapter.java:315)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.documentChanged(DefaultDocumentAdapter.java:258)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged2(AbstractDocument.java:739)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:716)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:700)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentChanged(AbstractDocument.java:774)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1105)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1123)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.updateUI(BuildConsolePartitioner.java:274)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4090)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3207)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -310,8 +354,8 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.186
-!MESSAGE Unhandled event loop exception
+!ENTRY org.eclipse.text 4 2 2020-06-07 01:25:08.406
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.text".
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.SWT.error(SWT.java:4701)
@@ -321,16 +365,24 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLinePixel(StyledText.java:4274)
+	at org.eclipse.swt.custom.StyledText.getPointAtOffset(StyledText.java:5602)
+	at org.eclipse.swt.custom.StyledText.setCaretLocation(StyledText.java:8710)
+	at org.eclipse.swt.custom.StyledText.setCaretOffset(StyledText.java:8836)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleViewer.revealEndOfDocument(BuildConsoleViewer.java:121)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleViewer$InternalDocumentListener.documentChanged(BuildConsoleViewer.java:58)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged2(AbstractDocument.java:747)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:716)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:700)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentChanged(AbstractDocument.java:774)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1105)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1123)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.updateUI(BuildConsolePartitioner.java:274)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4090)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3207)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -353,7 +405,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.194
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:08.407
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -364,16 +416,21 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLineIndex(StyledText.java:4303)
+	at org.eclipse.swt.custom.StyledText.handlePaint(StyledText.java:6249)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5800)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4175)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1081)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1563)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4816)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4827)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -396,8 +453,8 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.202
-!MESSAGE Unhandled event loop exception
+!ENTRY org.eclipse.text 4 2 2020-06-07 01:25:08.496
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.text".
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.SWT.error(SWT.java:4701)
@@ -407,16 +464,20 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLinePixel(StyledText.java:4274)
+	at org.eclipse.swt.custom.StyledText.handleTextChanging(StyledText.java:6424)
+	at org.eclipse.swt.custom.StyledText$5.textChanging(StyledText.java:5770)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.fireTextChanging(DefaultDocumentAdapter.java:360)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.documentAboutToBeChanged(DefaultDocumentAdapter.java:277)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentAboutToBeChanged(AbstractDocument.java:636)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1096)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1123)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.updateUI(BuildConsolePartitioner.java:274)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4090)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3207)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -439,8 +500,8 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.210
-!MESSAGE Unhandled event loop exception
+!ENTRY org.eclipse.text 4 2 2020-06-07 01:25:08.497
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.text".
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.SWT.error(SWT.java:4701)
@@ -450,16 +511,25 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLineIndex(StyledText.java:4303)
+	at org.eclipse.swt.custom.StyledText.redraw(StyledText.java:7652)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter$StyledTextPaintListener.redrawScrollBars(StyledTextThemedScrollBarAdapter.java:648)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter$AbstractStyledTextScrollHandler.checkNeedUpdate(StyledTextThemedScrollBarAdapter.java:154)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter$AbstractStyledTextScrollHandler.textChanged(StyledTextThemedScrollBarAdapter.java:171)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.fireTextChanged(DefaultDocumentAdapter.java:315)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.documentChanged(DefaultDocumentAdapter.java:258)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged2(AbstractDocument.java:739)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:716)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:700)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentChanged(AbstractDocument.java:774)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1105)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1123)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.updateUI(BuildConsolePartitioner.java:274)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4090)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3207)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -482,8 +552,8 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.220
-!MESSAGE Unhandled event loop exception
+!ENTRY org.eclipse.text 4 2 2020-06-07 01:25:08.499
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.text".
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.SWT.error(SWT.java:4701)
@@ -493,16 +563,24 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLinePixel(StyledText.java:4274)
+	at org.eclipse.swt.custom.StyledText.getPointAtOffset(StyledText.java:5602)
+	at org.eclipse.swt.custom.StyledText.setCaretLocation(StyledText.java:8710)
+	at org.eclipse.swt.custom.StyledText.setCaretOffset(StyledText.java:8836)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleViewer.revealEndOfDocument(BuildConsoleViewer.java:121)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleViewer$InternalDocumentListener.documentChanged(BuildConsoleViewer.java:58)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged2(AbstractDocument.java:747)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:716)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:700)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentChanged(AbstractDocument.java:774)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1105)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1123)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.updateUI(BuildConsolePartitioner.java:274)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4090)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3207)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -525,7 +603,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.227
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:08.500
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -536,16 +614,21 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLineIndex(StyledText.java:4303)
+	at org.eclipse.swt.custom.StyledText.handlePaint(StyledText.java:6249)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5800)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4175)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1081)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1563)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4816)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4827)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -568,7 +651,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.235
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.860
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -611,7 +694,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.242
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.868
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -654,7 +737,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.250
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.877
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -697,7 +780,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.258
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.884
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -740,7 +823,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.267
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.892
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -783,7 +866,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.273
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.900
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -826,7 +909,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.283
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.911
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -869,7 +952,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.290
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.917
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -912,7 +995,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.299
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.931
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -955,7 +1038,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.305
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.936
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -998,7 +1081,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.314
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.943
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1041,7 +1124,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.322
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.949
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1084,7 +1167,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.331
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.959
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1127,7 +1210,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.339
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.964
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1170,7 +1253,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.346
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.975
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1213,7 +1296,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.354
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.981
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1256,7 +1339,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.362
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:09.993
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1299,7 +1382,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.369
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.000
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1342,7 +1425,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.378
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.010
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1385,7 +1468,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.386
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.013
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1428,7 +1511,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.395
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.026
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1471,7 +1554,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.402
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.033
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1514,7 +1597,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.409
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.043
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1557,7 +1640,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.418
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.050
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1600,7 +1683,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.426
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.058
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1643,7 +1726,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.434
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.061
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1686,7 +1769,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.442
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.068
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1729,7 +1812,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.450
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.077
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1772,7 +1855,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.458
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.085
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1815,7 +1898,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.466
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.093
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1858,7 +1941,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.474
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.100
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1901,7 +1984,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.482
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.109
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1944,7 +2027,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.489
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.117
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -1987,7 +2070,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.497
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.124
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2030,7 +2113,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.506
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.133
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2073,7 +2156,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.514
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.140
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2116,7 +2199,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.522
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.149
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2159,7 +2242,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.539
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.156
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2202,7 +2285,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.562
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.167
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2245,7 +2328,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.578
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.173
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2288,7 +2371,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.586
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.181
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2331,7 +2414,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.594
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.188
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2374,7 +2457,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.602
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.196
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2417,7 +2500,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.609
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.204
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2460,7 +2543,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.617
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.212
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2503,7 +2586,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.627
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.220
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2546,7 +2629,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.634
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.228
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2589,7 +2672,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.643
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.238
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2632,7 +2715,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.650
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.244
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2675,7 +2758,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.659
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.253
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2718,7 +2801,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.665
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.260
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2761,7 +2844,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.674
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.270
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2804,7 +2887,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.682
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.277
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2847,7 +2930,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.690
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.285
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2890,7 +2973,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.697
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.293
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2933,7 +3016,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.706
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.300
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -2976,7 +3059,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.714
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.308
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3019,7 +3102,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.722
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.317
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3062,7 +3145,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.730
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.325
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3105,7 +3188,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.739
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.334
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3148,7 +3231,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.745
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.340
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3191,7 +3274,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.754
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.350
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3234,7 +3317,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.762
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.356
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3277,7 +3360,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.770
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.366
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3320,7 +3403,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.778
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.372
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3363,7 +3446,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.785
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.382
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3406,7 +3489,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.794
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.388
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3449,7 +3532,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.802
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.396
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3492,7 +3575,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.810
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.404
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3535,7 +3618,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.818
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.414
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3578,7 +3661,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.834
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.420
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3621,7 +3704,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.842
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.429
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3664,7 +3747,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.866
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.436
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3707,7 +3790,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.898
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.444
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3750,7 +3833,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.914
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.453
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3793,7 +3876,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.923
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.461
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3836,7 +3919,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.930
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.469
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3879,7 +3962,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.939
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.477
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3922,7 +4005,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.946
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.485
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -3965,7 +4048,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.956
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.493
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4008,7 +4091,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.962
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.501
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4051,7 +4134,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.970
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.509
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4094,7 +4177,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.978
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.517
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4137,7 +4220,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.986
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.533
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4180,7 +4263,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:06.994
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:10.541
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4223,7 +4306,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.002
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.212
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4266,7 +4349,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.010
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.231
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4309,7 +4392,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.018
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.270
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4352,7 +4435,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.026
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.277
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4395,7 +4478,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.467
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.284
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4438,7 +4521,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.476
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.292
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4481,7 +4564,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.482
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.301
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4524,7 +4607,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.490
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.308
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4567,7 +4650,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.498
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.316
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4610,7 +4693,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.507
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.324
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4653,7 +4736,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.513
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.332
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4696,7 +4779,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.522
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.340
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4739,7 +4822,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.531
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.349
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4782,7 +4865,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.538
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.357
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4825,7 +4908,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.546
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.365
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4868,7 +4951,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.554
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.372
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4911,7 +4994,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.562
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.381
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4954,7 +5037,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.570
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.388
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -4997,7 +5080,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.578
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.398
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5040,7 +5123,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.586
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.404
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5083,7 +5166,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.594
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.468
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5126,7 +5209,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.602
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.557
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5169,7 +5252,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.610
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.565
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5212,7 +5295,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.618
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.573
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5255,7 +5338,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.626
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.581
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5298,7 +5381,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.634
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.588
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5341,7 +5424,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.642
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.597
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5384,7 +5467,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.650
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.604
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5427,7 +5510,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.658
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.613
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5470,7 +5553,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.666
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.621
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5513,7 +5596,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.674
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.630
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5556,7 +5639,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.682
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.637
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5599,7 +5682,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.690
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.646
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5642,7 +5725,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.698
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.658
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5685,7 +5768,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.707
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.662
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5728,7 +5811,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.714
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.669
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5771,7 +5854,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.721
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.677
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5814,7 +5897,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.730
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.685
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5857,7 +5940,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.738
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.696
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5900,7 +5983,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.746
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.701
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5943,7 +6026,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.754
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.709
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -5986,7 +6069,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.761
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.717
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6029,7 +6112,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.769
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.726
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6072,7 +6155,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.778
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.733
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6115,7 +6198,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.786
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.743
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6158,7 +6241,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.794
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.749
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6201,7 +6284,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.802
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.757
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6244,7 +6327,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.810
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.813
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6287,7 +6370,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.818
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.829
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6330,7 +6413,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.826
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.845
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6373,7 +6456,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.833
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.862
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6416,7 +6499,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.843
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.866
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6459,7 +6542,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.850
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.874
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6502,7 +6585,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.858
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.877
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6545,7 +6628,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.865
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.893
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6588,7 +6671,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.874
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.901
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6631,7 +6714,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.882
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.909
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6674,7 +6757,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.892
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.917
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6717,7 +6800,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.898
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.924
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6760,7 +6843,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.906
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.932
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6803,7 +6886,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.917
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.942
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6846,7 +6929,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.930
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.948
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6889,7 +6972,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.946
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.957
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6932,7 +7015,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.954
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.965
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -6975,7 +7058,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.962
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.973
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7018,7 +7101,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.970
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.981
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7061,7 +7144,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.978
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.989
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7104,7 +7187,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.988
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:11.997
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7147,7 +7230,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:07.994
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.005
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7190,7 +7273,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.002
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.012
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7233,7 +7316,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.011
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.021
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7276,7 +7359,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.018
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.028
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7319,7 +7402,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.026
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.036
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7362,7 +7445,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.035
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.045
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7405,7 +7488,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.042
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.053
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7448,7 +7531,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.050
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.061
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7491,7 +7574,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.058
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.069
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7534,7 +7617,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.066
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.077
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7577,7 +7660,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.074
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.085
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7620,7 +7703,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.082
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.093
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7663,7 +7746,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.090
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.101
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7706,7 +7789,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.098
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.109
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7749,7 +7832,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.106
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.116
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7792,7 +7875,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.114
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.125
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7835,7 +7918,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.123
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.133
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7878,7 +7961,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.130
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.141
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7921,7 +8004,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.138
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.148
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -7964,7 +8047,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.147
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.157
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8007,7 +8090,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.154
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.165
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8050,7 +8133,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.162
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.173
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8093,7 +8176,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.171
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.181
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8136,7 +8219,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.178
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.189
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8179,7 +8262,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.186
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.196
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8222,7 +8305,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.196
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.204
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8265,7 +8348,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.202
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.212
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8308,7 +8391,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.210
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.221
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8351,7 +8434,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.218
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.228
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8394,7 +8477,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.225
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.236
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8437,7 +8520,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.236
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.244
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8480,7 +8563,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.306
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.253
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8523,7 +8606,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.338
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.261
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8566,7 +8649,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.353
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.272
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8609,7 +8692,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.377
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.276
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8652,7 +8735,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.386
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.286
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8695,7 +8778,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.402
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.292
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8738,7 +8821,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.466
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.303
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8781,7 +8864,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.498
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.309
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8824,7 +8907,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.508
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.319
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8867,7 +8950,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.514
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.324
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8910,7 +8993,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.537
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.333
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8953,7 +9036,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.546
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.341
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -8996,7 +9079,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.562
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.348
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9039,7 +9122,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.578
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.356
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9082,7 +9165,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.586
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.365
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9125,7 +9208,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.603
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.372
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9168,7 +9251,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.610
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.382
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9211,7 +9294,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.650
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.388
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9254,7 +9337,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.834
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.397
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9270,48 +9353,6 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
 	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
 	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:660)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:559)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
-
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.844
-!MESSAGE Unhandled event loop exception
-!STACK 0
-java.lang.IllegalArgumentException: Argument not valid
-	at org.eclipse.swt.SWT.error(SWT.java:4701)
-	at org.eclipse.swt.SWT.error(SWT.java:4635)
-	at org.eclipse.swt.SWT.error(SWT.java:4606)
-	at org.eclipse.jface.text.DefaultDocumentAdapter.getLine(DefaultDocumentAdapter.java:167)
-	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
-	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
-	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:330)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
 	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
@@ -9339,7 +9380,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:08.979
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.404
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9354,7 +9395,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
 	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
 	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:356)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
 	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
@@ -9382,7 +9423,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.051
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.653
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9425,7 +9466,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.058
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.686
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9468,7 +9509,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.066
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.693
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9511,7 +9552,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.074
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.700
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9554,7 +9595,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.083
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.708
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9597,7 +9638,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.089
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.717
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9640,7 +9681,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.097
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.725
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9683,7 +9724,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.106
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.733
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9726,7 +9767,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.114
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.741
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9769,7 +9810,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.122
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.749
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9812,7 +9853,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.131
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.756
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9855,7 +9896,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.138
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.764
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9898,7 +9939,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.146
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.772
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9941,7 +9982,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.154
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.780
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -9984,7 +10025,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.163
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.788
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10027,7 +10068,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.170
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.796
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10070,7 +10111,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.178
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.804
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10113,7 +10154,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.186
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.812
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10156,7 +10197,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.194
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.821
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10199,7 +10240,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.202
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.828
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10242,7 +10283,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.210
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.836
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10285,7 +10326,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.222
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.845
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10328,7 +10369,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:03:09.226
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.864
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10371,7 +10412,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.606
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.865
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10414,7 +10455,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.613
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.868
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10425,11 +10466,12 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLineIndex(StyledText.java:4303)
+	at org.eclipse.swt.custom.StyledText.redraw(StyledText.java:7652)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter$StyledTextPaintListener.redrawScrollBars(StyledTextThemedScrollBarAdapter.java:648)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.setMouseNearScrollScrollBar(AbstractThemedScrollBarAdapter.java:414)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:380)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
 	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
@@ -10457,7 +10499,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.625
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.870
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10468,16 +10510,21 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLineIndex(StyledText.java:4303)
+	at org.eclipse.swt.custom.StyledText.handlePaint(StyledText.java:6249)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5800)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4175)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1081)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1563)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4816)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4819)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -10500,7 +10547,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.627
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.872
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10511,16 +10558,16 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLinePixel(StyledText.java:4274)
+	at org.eclipse.swt.custom.StyledText.getPointAtOffset(StyledText.java:5602)
+	at org.eclipse.swt.custom.StyledText.setCaretLocation(StyledText.java:8710)
+	at org.eclipse.swt.custom.StyledText.setMargins(StyledText.java:9759)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter$StyledTextPaintListener.lambda$1(StyledTextThemedScrollBarAdapter.java:583)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3590)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -10543,7 +10590,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.639
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:12.913
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10555,15 +10602,11 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
 	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.custom.StyledTextRenderer$1.run(StyledTextRenderer.java:352)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3590)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -10586,7 +10629,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.647
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.359
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10597,11 +10640,12 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLineIndex(StyledText.java:4303)
+	at org.eclipse.swt.custom.StyledText.redraw(StyledText.java:7652)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter$StyledTextPaintListener.redrawScrollBars(StyledTextThemedScrollBarAdapter.java:648)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.setMouseNearScrollScrollBar(AbstractThemedScrollBarAdapter.java:414)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:383)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
 	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
@@ -10629,7 +10673,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.654
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.376
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10672,7 +10716,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.662
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.403
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10715,7 +10759,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.666
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.406
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10758,7 +10802,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.676
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.408
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10801,7 +10845,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.682
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.409
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10812,16 +10856,21 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLineIndex(StyledText.java:4303)
+	at org.eclipse.swt.custom.StyledText.handlePaint(StyledText.java:6249)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5800)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4175)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1081)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1563)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4816)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:348)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4827)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3585)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -10844,7 +10893,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.690
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.415
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10887,7 +10936,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.698
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.429
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10930,7 +10979,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.706
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.430
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10973,7 +11022,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.714
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.432
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -10984,16 +11033,16 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:1002)
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
-	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.custom.StyledTextRenderer.getLineHeight(StyledTextRenderer.java:665)
+	at org.eclipse.swt.custom.StyledText.getLinePixel(StyledText.java:4274)
+	at org.eclipse.swt.custom.StyledText.getPointAtOffset(StyledText.java:5602)
+	at org.eclipse.swt.custom.StyledText.setCaretLocation(StyledText.java:8710)
+	at org.eclipse.swt.custom.StyledText.setMargins(StyledText.java:9759)
+	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter$StyledTextPaintListener.lambda$1(StyledTextThemedScrollBarAdapter.java:583)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3590)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -11016,7 +11065,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.722
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.471
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11028,15 +11077,11 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.swt.custom.StyledTextRenderer.getTextLayout(StyledTextRenderer.java:888)
 	at org.eclipse.swt.custom.StyledTextRenderer.calculate(StyledTextRenderer.java:296)
 	at org.eclipse.swt.custom.StyledText.getVerticalScrollOffset(StyledText.java:5398)
-	at org.eclipse.swt.custom.StyledText.getTopPixel(StyledText.java:5386)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.StyledTextThemedScrollBarAdapter.computeHorizontalAndTopPixel(StyledTextThemedScrollBarAdapter.java:68)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.checkChangedHorizontalAndTopPixel(AbstractThemedScrollBarAdapter.java:421)
-	at org.eclipse.e4.ui.internal.css.swt.dom.scrollbar.AbstractThemedScrollBarAdapter.handleEvent(AbstractThemedScrollBarAdapter.java:393)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1201)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1056)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3988)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3587)
+	at org.eclipse.swt.custom.StyledTextRenderer$1.run(StyledTextRenderer.java:352)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3590)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
@@ -11059,7 +11104,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.730
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.473
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11102,7 +11147,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.738
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.476
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11145,7 +11190,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.746
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.484
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11188,7 +11233,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.755
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.732
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11231,7 +11276,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.762
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.743
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11274,7 +11319,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.770
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.749
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11317,7 +11362,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.778
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.757
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11360,7 +11405,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.787
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.764
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11403,7 +11448,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.794
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.773
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11446,7 +11491,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.803
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.780
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11489,7 +11534,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.810
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.789
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11532,7 +11577,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.819
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.796
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11575,7 +11620,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:13.826
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.804
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11618,7 +11663,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.130
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.812
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11661,7 +11706,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.138
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.821
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11704,7 +11749,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.146
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.828
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11747,7 +11792,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.154
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.837
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11790,7 +11835,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.163
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.845
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11833,7 +11878,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.170
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.852
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11876,7 +11921,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.178
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.860
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11919,7 +11964,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.186
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.868
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -11962,7 +12007,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.194
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.876
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12005,7 +12050,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.202
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.886
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12048,7 +12093,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.210
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.892
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12091,7 +12136,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.219
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.900
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12134,7 +12179,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.226
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.910
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12177,7 +12222,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.234
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.916
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12220,7 +12265,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.242
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.925
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12263,7 +12308,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.252
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.932
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12306,7 +12351,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.258
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.942
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12349,7 +12394,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.268
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.948
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12392,7 +12437,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.346
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.958
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12435,7 +12480,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.506
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.964
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12478,7 +12523,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.514
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.973
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12521,7 +12566,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.522
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.981
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12564,7 +12609,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.530
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:26.997
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12607,7 +12652,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.537
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.005
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12650,7 +12695,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.546
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.012
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12693,7 +12738,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.554
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.020
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12736,7 +12781,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.563
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.029
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12779,7 +12824,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.570
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.037
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12822,7 +12867,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.579
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.045
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12865,7 +12910,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.586
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.060
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12908,7 +12953,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.594
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.237
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12951,7 +12996,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.601
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.244
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -12994,7 +13039,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.610
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.253
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -13037,7 +13082,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.618
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.261
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -13080,7 +13125,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.626
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.270
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -13123,7 +13168,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.633
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.276
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -13166,7 +13211,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.642
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.286
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -13209,7 +13254,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.650
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.293
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -13252,7 +13297,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.658
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.301
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -13295,7 +13340,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.666
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.309
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
@@ -13338,7 +13383,7 @@ java.lang.IllegalArgumentException: Argument not valid
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
-!ENTRY org.eclipse.ui 4 0 2020-05-29 03:05:14.673
+!ENTRY org.eclipse.ui 4 0 2020-06-07 01:25:27.319
 !MESSAGE Unhandled event loop exception
 !STACK 0
 java.lang.IllegalArgumentException: Argument not valid
