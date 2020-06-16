@@ -1,0 +1,274 @@
+[
+  {
+    "text": "outofbox_msp432p401r",
+    "type": "folder",
+    "numChildren": 12,
+    "numChildrenLocal": 108,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/outofbox_msp432p401r&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/nortos/MSP_EXP432P401R/demos/outofbox_msp432p401r/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "blinkled_msp432p401r",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 21,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/blinkled_msp432p401r&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/nortos/MSP_EXP432P401R/demos/blinkled_msp432p401r/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "boostxl-capkeypad_captivate_demo",
+    "type": "folder",
+    "numChildren": 8,
+    "numChildrenLocal": 122,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/boostxl-capkeypad_captivate_demo&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/rtos/MSP_EXP432P401R/demos/boostxl-capkeypad_captivate_demo/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "boostxl_batpakmkii_fuelgauge",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 39,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/boostxl_batpakmkii_fuelgauge&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/nortos/MSP_EXP432P401R/demos/boostxl_batpakmkii_fuelgauge/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "boostxl_edumkii_accelerometer_msp432p401r",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 33,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/boostxl_edumkii_accelerometer_msp432p401r&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/nortos/MSP_EXP432P401R/demos/boostxl_edumkii_accelerometer_msp432p401r/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "boostxl_edumkii_joystick_msp432p401r",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 33,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/boostxl_edumkii_joystick_msp432p401r&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/nortos/MSP_EXP432P401R/demos/boostxl_edumkii_joystick_msp432p401r/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "boostxl_edumkii_lightsensor_msp432p401r",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 45,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/boostxl_edumkii_lightsensor_msp432p401r&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/nortos/MSP_EXP432P401R/demos/boostxl_edumkii_lightsensor_msp432p401r/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "boostxl_edumkii_microphonefft_msp432p401r",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 33,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/boostxl_edumkii_microphonefft_msp432p401r&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/nortos/MSP_EXP432P401R/demos/boostxl_edumkii_microphonefft_msp432p401r/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "boostxl_edumkii_temperature_msp432p401r",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 45,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/boostxl_edumkii_temperature_msp432p401r&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/nortos/MSP_EXP432P401R/demos/boostxl_edumkii_temperature_msp432p401r/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "boostxl_sensors_sensorgui_msp432p401r",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 78,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/boostxl_sensors_sensorgui_msp432p401r&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/nortos/MSP_EXP432P401R/demos/boostxl_sensors_sensorgui_msp432p401r/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "cmsis_dsplib_oversample",
+    "type": "folder",
+    "numChildren": 4,
+    "numChildrenLocal": 34,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/cmsis_dsplib_oversample&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/rtos/MSP_EXP432P401R/demos/cmsis_dsplib_oversample/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "cmsis_dsplib_ulp",
+    "type": "folder",
+    "numChildren": 6,
+    "numChildrenLocal": 72,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/cmsis_dsplib_ulp&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/nortos/MSP_EXP432P401R/demos/cmsis_dsplib_ulp/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "cmsis_dsplib_vibration_msp432p401r",
+    "type": "folder",
+    "numChildren": 3,
+    "numChildrenLocal": 21,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/cmsis_dsplib_vibration_msp432p401r&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/nortos/MSP_EXP432P401R/demos/cmsis_dsplib_vibration_msp432p401r/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "portable",
+    "type": "folder",
+    "numChildren": 8,
+    "numChildrenLocal": 59,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/portable&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/rtos/MSP_EXP432P401R/demos/portable/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "portableNative",
+    "type": "folder",
+    "numChildren": 8,
+    "numChildrenLocal": 59,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/portableNative&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/rtos/MSP_EXP432P401R/demos/portableNative/README.html",
+    "packageOrder": 295
+  },
+  {
+    "text": "tida_01575_serial",
+    "type": "folder",
+    "numChildren": 8,
+    "numChildrenLocal": 74,
+    "children": true,
+    "state": {
+      "opened": false
+    },
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "url": "/api/resources?package=msp430ware__3.80.09.03::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::xdctools__3.61.00.16&path=Software/SimpleLink%20MSP432P4%20SDK/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos",
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02",
+    "removeofflineLink": "api/resources?package=com.ti.SIMPLELINK_ACADEMY_MSP432SDK__3.30.01.00::com.ti.SIMPLELINK_MSP432_SDK__3.40.01.02::msp430ware__3.80.09.03::xdctools__3.61.00.16&path=Software/SimpleLink MSP432P4 SDK/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/tida_01575_serial&removeoffline=true",
+    "overviewLink": "C:/CCS/CCS_CODE//simplelink_msp432p4_sdk_3_40_01_02/examples/rtos/MSP_EXP432P401R/demos/tida_01575_serial/README.html",
+    "packageOrder": 295
+  }
+]
