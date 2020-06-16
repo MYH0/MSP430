@@ -1,5 +1,5 @@
 //org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
-ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc\tTorg.eclipse.cdt.ui.presentation\tTorg.eclipse.cdt.ui.CEditor.presentation
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc\tTorg.eclipse.cdt.ui.presentation\tTorg.eclipse.cdt.ui.CEditor.presentation\tTorg.eclipse.debug.ui.presentation
 ColorsAndFontsPreferencePage.selectedElement=Forg.eclipse.cdt.ui.editors.textfont
 RUN_IN_BACKGROUND=false
 UIActivities.com.ti.ccstudio.activities.RSEActivity=true

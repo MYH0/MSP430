@@ -18556,3 +18556,43 @@ gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
 gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P8 WDT Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P8 WDT Keyboard.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P9 WDT Long-Short Keyboard ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
+
+**** Build Finished ****
