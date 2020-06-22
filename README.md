@@ -2,4 +2,7 @@
 Compiler:CCS v10
 
 基于MSP430G2553LP
+
 基于MSP430F5529LP
+
+
