@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="7"/>
-		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_X_ORIGIN" value="293"/>
+		<item key="DIALOG_Y_ORIGIN" value="21"/>
 	</section>
 	<section name="org.eclipse.ui.preferences.keysPreferencePage">
 	</section>
@@ -19,5 +19,7 @@
 	<section name="targetStatusBarPreferencePage">
 		<item key="targetStatusBarPreferencePage.processorId" value="TMS320C56"/>
 		<item key="targetStatusBarPreferencePage.processorType" value="DSK"/>
+	</section>
+	<section name="MemoryDumperFillAction">
 	</section>
 </section>

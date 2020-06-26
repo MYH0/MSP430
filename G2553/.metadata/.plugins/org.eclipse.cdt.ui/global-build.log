@@ -20162,3 +20162,1541 @@ gmake[1]: 'A1 Calender.out' is up to date.
 gmake[1]: 'A1 Calender.out' is up to date.
 
 **** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+找不到 C:\0Practice\Hardware\TI\MSP430\G2553\P02 TimerA Blink LED1\Debug\P02 TimerA Blink LED1.hex
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P02 TimerA Blink LED1.out"
+ 
+Building files: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+Translating to Intel format...
+   "P02 TimerA Blink LED1.out" .text ==> .text
+   "P02 TimerA Blink LED1.out" .cinit ==> .cinit
+   "P02 TimerA Blink LED1.out" $fill000 ==> $fill000
+   "P02 TimerA Blink LED1.out" TRAPINT ==> TRAPINT
+   "P02 TimerA Blink LED1.out" PORT1 ==> PORT1
+   "P02 TimerA Blink LED1.out" PORT2 ==> PORT2
+   "P02 TimerA Blink LED1.out" ADC10 ==> ADC10
+   "P02 TimerA Blink LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P02 TimerA Blink LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P02 TimerA Blink LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P02 TimerA Blink LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P02 TimerA Blink LED1.out" WDT ==> WDT
+   "P02 TimerA Blink LED1.out" COMPARATORA ==> COMPARATORA
+   "P02 TimerA Blink LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P02 TimerA Blink LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P02 TimerA Blink LED1.out" NMI ==> NMI
+   "P02 TimerA Blink LED1.out" .reset ==> .reset
+Finished building: "P02 TimerA Blink LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P00 Example ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P00 Example.hex"  "P00 Example.out" 
+DEL /F "blink.obj" 
+DEL /F "blink.d" 
+找不到 C:\0Practice\Hardware\TI\MSP430\G2553\P00 Example\Debug\P00 Example.hex
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P00 Example ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../blink.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P00 Example" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="blink.d_raw"  "../blink.c"
+"../blink.c", line 17: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: "../blink.c"
+ 
+Building target: "P00 Example.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P00 Example.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P00 Example_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P00 Example.out" "./blink.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P00 Example.out"
+ 
+Building files: "P00 Example.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P00 Example.hex"  "P00 Example.out" 
+Translating to Intel format...
+   "P00 Example.out" .text ==> .text
+   "P00 Example.out" $fill000 ==> $fill000
+   "P00 Example.out" TRAPINT ==> TRAPINT
+   "P00 Example.out" PORT1 ==> PORT1
+   "P00 Example.out" PORT2 ==> PORT2
+   "P00 Example.out" ADC10 ==> ADC10
+   "P00 Example.out" USCIAB0TX ==> USCIAB0TX
+   "P00 Example.out" USCIAB0RX ==> USCIAB0RX
+   "P00 Example.out" TIMER0_A1 ==> TIMER0_A1
+   "P00 Example.out" TIMER0_A0 ==> TIMER0_A0
+   "P00 Example.out" WDT ==> WDT
+   "P00 Example.out" COMPARATORA ==> COMPARATORA
+   "P00 Example.out" TIMER1_A1 ==> TIMER1_A1
+   "P00 Example.out" TIMER1_A0 ==> TIMER1_A0
+   "P00 Example.out" NMI ==> NMI
+   "P00 Example.out" .reset ==> .reset
+Finished building: "P00 Example.out"
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P01 Blink LED2 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P01 Blink LED2.hex"  "P01 Blink LED2.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+找不到 C:\0Practice\Hardware\TI\MSP430\G2553\P01 Blink LED2\Debug\P01 Blink LED2.hex
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P01 Blink LED2 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P01 Blink LED2" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 11: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 11: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "P01 Blink LED2.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P01 Blink LED2.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P01 Blink LED2_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P01 Blink LED2.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P01 Blink LED2.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P02 TimerA Blink LED1.out' is up to date.
+gmake[1]: Nothing to be done for 'secondary-outputs'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P02 TimerA Blink LED1.out"
+ 
+Building files: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+Translating to Intel format...
+   "P02 TimerA Blink LED1.out" .text ==> .text
+   "P02 TimerA Blink LED1.out" .cinit ==> .cinit
+   "P02 TimerA Blink LED1.out" $fill000 ==> $fill000
+   "P02 TimerA Blink LED1.out" TRAPINT ==> TRAPINT
+   "P02 TimerA Blink LED1.out" PORT1 ==> PORT1
+   "P02 TimerA Blink LED1.out" PORT2 ==> PORT2
+   "P02 TimerA Blink LED1.out" ADC10 ==> ADC10
+   "P02 TimerA Blink LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P02 TimerA Blink LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P02 TimerA Blink LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P02 TimerA Blink LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P02 TimerA Blink LED1.out" WDT ==> WDT
+   "P02 TimerA Blink LED1.out" COMPARATORA ==> COMPARATORA
+   "P02 TimerA Blink LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P02 TimerA Blink LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P02 TimerA Blink LED1.out" NMI ==> NMI
+   "P02 TimerA Blink LED1.out" .reset ==> .reset
+Finished building: "P02 TimerA Blink LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P02 TimerA Blink LED1.out' is up to date.
+gmake[1]: Nothing to be done for 'secondary-outputs'.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P02 TimerA Blink LED1.out"
+ 
+Building files: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+Translating to Intel format...
+   "P02 TimerA Blink LED1.out" .text ==> .text
+   "P02 TimerA Blink LED1.out" .cinit ==> .cinit
+   "P02 TimerA Blink LED1.out" $fill000 ==> $fill000
+   "P02 TimerA Blink LED1.out" TRAPINT ==> TRAPINT
+   "P02 TimerA Blink LED1.out" PORT1 ==> PORT1
+   "P02 TimerA Blink LED1.out" PORT2 ==> PORT2
+   "P02 TimerA Blink LED1.out" ADC10 ==> ADC10
+   "P02 TimerA Blink LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P02 TimerA Blink LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P02 TimerA Blink LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P02 TimerA Blink LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P02 TimerA Blink LED1.out" WDT ==> WDT
+   "P02 TimerA Blink LED1.out" COMPARATORA ==> COMPARATORA
+   "P02 TimerA Blink LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P02 TimerA Blink LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P02 TimerA Blink LED1.out" NMI ==> NMI
+   "P02 TimerA Blink LED1.out" .reset ==> .reset
+Finished building: "P02 TimerA Blink LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P02 TimerA Blink LED1.out"
+ 
+Building files: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+Translating to Intel format...
+   "P02 TimerA Blink LED1.out" .text ==> .text
+   "P02 TimerA Blink LED1.out" .cinit ==> .cinit
+   "P02 TimerA Blink LED1.out" $fill000 ==> $fill000
+   "P02 TimerA Blink LED1.out" TRAPINT ==> TRAPINT
+   "P02 TimerA Blink LED1.out" PORT1 ==> PORT1
+   "P02 TimerA Blink LED1.out" PORT2 ==> PORT2
+   "P02 TimerA Blink LED1.out" ADC10 ==> ADC10
+   "P02 TimerA Blink LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P02 TimerA Blink LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P02 TimerA Blink LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P02 TimerA Blink LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P02 TimerA Blink LED1.out" WDT ==> WDT
+   "P02 TimerA Blink LED1.out" COMPARATORA ==> COMPARATORA
+   "P02 TimerA Blink LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P02 TimerA Blink LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P02 TimerA Blink LED1.out" NMI ==> NMI
+   "P02 TimerA Blink LED1.out" .reset ==> .reset
+Finished building: "P02 TimerA Blink LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P03 Keyboard_Independent ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P03 Keyboard_Independent.hex"  "P03 Keyboard_Independent.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+找不到 C:\0Practice\Hardware\TI\MSP430\G2553\P03 Keyboard_Independent\Debug\P03 Keyboard_Independent.hex
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P03 Keyboard_Independent ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P03 Keyboard_Independent" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 50: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 55: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 60: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 139: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 140: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 141: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 152: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 153: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 154: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 66: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 12: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 35 (col. 44): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 36 (col. 44): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 37 (col. 42): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 38 (col. 42): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 50 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 55 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 60 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 139 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 141 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 152 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 154 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P03 Keyboard_Independent.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P03 Keyboard_Independent.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P03 Keyboard_Independent_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P03 Keyboard_Independent.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P03 Keyboard_Independent.out"
+ 
+Building files: "P03 Keyboard_Independent.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=16 --romwidth=16 --intel -o "P03 Keyboard_Independent.hex"  "P03 Keyboard_Independent.out" 
+Translating to Intel format...
+   "P03 Keyboard_Independent.out" .text ==> .text
+   "P03 Keyboard_Independent.out" .cinit ==> .cinit
+   "P03 Keyboard_Independent.out" $fill000 ==> $fill000
+   "P03 Keyboard_Independent.out" TRAPINT ==> TRAPINT
+   "P03 Keyboard_Independent.out" PORT1 ==> PORT1
+   "P03 Keyboard_Independent.out" PORT2 ==> PORT2
+   "P03 Keyboard_Independent.out" ADC10 ==> ADC10
+   "P03 Keyboard_Independent.out" USCIAB0TX ==> USCIAB0TX
+   "P03 Keyboard_Independent.out" USCIAB0RX ==> USCIAB0RX
+   "P03 Keyboard_Independent.out" TIMER0_A1 ==> TIMER0_A1
+   "P03 Keyboard_Independent.out" TIMER0_A0 ==> TIMER0_A0
+   "P03 Keyboard_Independent.out" WDT ==> WDT
+   "P03 Keyboard_Independent.out" COMPARATORA ==> COMPARATORA
+   "P03 Keyboard_Independent.out" TIMER1_A1 ==> TIMER1_A1
+   "P03 Keyboard_Independent.out" TIMER1_A0 ==> TIMER1_A0
+   "P03 Keyboard_Independent.out" NMI ==> NMI
+   "P03 Keyboard_Independent.out" .reset ==> .reset
+Finished building: "P03 Keyboard_Independent.out"
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P04 PWM Control LED2 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P04 PWM Control LED2.hex"  "P04 PWM Control LED2.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+找不到 C:\0Practice\Hardware\TI\MSP430\G2553\P04 PWM Control LED2\Debug\P04 PWM Control LED2.hex
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P04 PWM Control LED2 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P04 PWM Control LED2" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TA_PWM.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 148: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 149: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 150: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 150: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 159: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 159: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 161: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 161: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 169: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 169: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 171: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 171: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 264: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 277: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 278: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 279: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 279: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 288: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 288: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 290: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 290: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 298: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 298: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 300: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 300: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\GPIO.h", line 71: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P04 PWM Control LED2.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P04 PWM Control LED2.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P04 PWM Control LED2_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P04 PWM Control LED2.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P04 PWM Control LED2.out"
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P05 WDT Blink_LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P05 WDT Blink_LED1.hex"  "P05 WDT Blink_LED1.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+找不到 C:\0Practice\Hardware\TI\MSP430\G2553\P05 WDT Blink_LED1\Debug\P05 WDT Blink_LED1.hex
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P05 WDT Blink_LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P05 WDT Blink_LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Watching_Dog.h", line 40: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 72: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\GPIO.h", line 69: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P05 WDT Blink_LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P05 WDT Blink_LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P05 WDT Blink_LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P05 WDT Blink_LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P05 WDT Blink_LED1.out"
+ 
+Building files: "P05 WDT Blink_LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P05 WDT Blink_LED1.hex"  "P05 WDT Blink_LED1.out" 
+Translating to Intel format...
+   "P05 WDT Blink_LED1.out" .text ==> .text
+   "P05 WDT Blink_LED1.out" .cinit ==> .cinit
+   "P05 WDT Blink_LED1.out" $fill000 ==> $fill000
+   "P05 WDT Blink_LED1.out" TRAPINT ==> TRAPINT
+   "P05 WDT Blink_LED1.out" PORT1 ==> PORT1
+   "P05 WDT Blink_LED1.out" PORT2 ==> PORT2
+   "P05 WDT Blink_LED1.out" ADC10 ==> ADC10
+   "P05 WDT Blink_LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P05 WDT Blink_LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P05 WDT Blink_LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P05 WDT Blink_LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P05 WDT Blink_LED1.out" WDT ==> WDT
+   "P05 WDT Blink_LED1.out" COMPARATORA ==> COMPARATORA
+   "P05 WDT Blink_LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P05 WDT Blink_LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P05 WDT Blink_LED1.out" NMI ==> NMI
+   "P05 WDT Blink_LED1.out" .reset ==> .reset
+Finished building: "P05 WDT Blink_LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P06 WD NMI Interrupt For LED2 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P06 WD NMI Interrupt For LED2.hex"  "P06 WD NMI Interrupt For LED2.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+找不到 C:\0Practice\Hardware\TI\MSP430\G2553\P06 WD NMI Interrupt For LED2\Debug\P06 WD NMI Interrupt For LED2.hex
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P06 WD NMI Interrupt For LED2 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P06 WD NMI Interrupt For LED2" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Watching_Dog.h", line 40: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 77: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\GPIO.h", line 69: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P06 WD NMI Interrupt For LED2.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P06 WD NMI Interrupt For LED2.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P06 WD NMI Interrupt For LED2_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P06 WD NMI Interrupt For LED2.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P06 WD NMI Interrupt For LED2.out"
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P07 WD PWM-Breath LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P07 WD PWM-Breath LED1.hex"  "P07 WD PWM-Breath LED1.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+找不到 C:\0Practice\Hardware\TI\MSP430\G2553\P07 WD PWM-Breath LED1\Debug\P07 WD PWM-Breath LED1.hex
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P07 WD PWM-Breath LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P07 WD PWM-Breath LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 86: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 176: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TA_PWM.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 148: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 149: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 150: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 150: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 159: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 159: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 161: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 161: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 169: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 169: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 171: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 171: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 284: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 297: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 298: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 299: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 299: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 308: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 308: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 310: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 310: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 318: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 318: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\TA_PWM.h", line 320: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"..\TA_PWM.h", line 320: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Watching_Dog.h", line 41: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 73: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\GPIO.h", line 69: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P07 WD PWM-Breath LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P07 WD PWM-Breath LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P07 WD PWM-Breath LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P07 WD PWM-Breath LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P07 WD PWM-Breath LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P08 WDT Keyboard ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P08 WDT Keyboard.hex"  "P08 WDT Keyboard.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+找不到 C:\0Practice\Hardware\TI\MSP430\G2553\P08 WDT Keyboard\Debug\P08 WDT Keyboard.hex
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P08 WDT Keyboard ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P08 WDT Keyboard" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 91: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 41: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 73: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P08 WDT Keyboard.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P08 WDT Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P08 WDT Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P08 WDT Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P08 WDT Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P09 WDT Long-Short Keyboard ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P09 WDT Long-Short Keyboard.hex"  "P09 WDT Long-Short Keyboard.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+找不到 C:\0Practice\Hardware\TI\MSP430\G2553\P09 WDT Long-Short Keyboard\Debug\P09 WDT Long-Short Keyboard.hex
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P09 WDT Long-Short Keyboard ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P09 WDT Long-Short Keyboard" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 54: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 136: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 137: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 149: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 150: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\GPIO.h", line 110: remark #1538-D: (ULP 10.1) ISR P1_Interrupt calls function GPIO_Interrupt_Scan. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 39: remark #1538-D: (ULP 10.1) ISR WDT_Interrupt calls function WDT_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Watching_Dog.h", line 75: remark #1538-D: (ULP 10.1) ISR NMI_Interrupt calls function NMI_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\Clock.h", line 135 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 137 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 150 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P09 WDT Long-Short Keyboard.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P09 WDT Long-Short Keyboard.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P09 WDT Long-Short Keyboard_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P09 WDT Long-Short Keyboard.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P09 WDT Long-Short Keyboard.out"
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project A1 Calender ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "A1 Calender.hex"  "A1 Calender.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/A1 Calender" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 169: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 174: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 191: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 327: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 334: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 342: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 343: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 350: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 351: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 358: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 359: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 366: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 367: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "A1 Calender.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"A1 Calender.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="A1 Calender_linkInfo.xml" --use_hw_mpy=none --rom_model -o "A1 Calender.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "A1 Calender.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 9: warning #225-D: function "BCS_Init" declared implicitly
+"../main.c", line 10: warning #225-D: function "TA0_Init" declared implicitly
+"../main.c", line 11: warning #225-D: function "GPIO_Init" declared implicitly
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+ 
+ undefined first referenced
+  symbol       in file     
+ --------- ----------------
+ BCS_Init  ./main.obj      
+ GPIO_Init ./main.obj      
+ TA0_Init  ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "P02 TimerA Blink LED1.out" not built
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+ 
+>> Compilation failure
+makefile:141: recipe for target 'P02 TimerA Blink LED1.out' failed
+gmake[1]: *** [P02 TimerA Blink LED1.out] Error 1
+gmake[1]: Target 'secondary-outputs' not remade because of errors.
+makefile:137: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 10: warning #225-D: function "TA0_Init" declared implicitly
+"../main.c", line 11: warning #225-D: function "GPIO_Init" declared implicitly
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+ 
+ undefined first referenced
+  symbol       in file     
+ --------- ----------------
+ GPIO_Init ./main.obj      
+ TA0_Init  ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+error #10010: errors encountered during linking; "P02 TimerA Blink LED1.out" not built
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+ 
+>> Compilation failure
+makefile:141: recipe for target 'P02 TimerA Blink LED1.out' failed
+gmake[1]: *** [P02 TimerA Blink LED1.out] Error 1
+gmake[1]: Target 'secondary-outputs' not remade because of errors.
+makefile:137: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P02 TimerA Blink LED1.out"
+ 
+Building files: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+Translating to Intel format...
+   "P02 TimerA Blink LED1.out" .text ==> .text
+   "P02 TimerA Blink LED1.out" .cinit ==> .cinit
+   "P02 TimerA Blink LED1.out" $fill000 ==> $fill000
+   "P02 TimerA Blink LED1.out" TRAPINT ==> TRAPINT
+   "P02 TimerA Blink LED1.out" PORT1 ==> PORT1
+   "P02 TimerA Blink LED1.out" PORT2 ==> PORT2
+   "P02 TimerA Blink LED1.out" ADC10 ==> ADC10
+   "P02 TimerA Blink LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P02 TimerA Blink LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P02 TimerA Blink LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P02 TimerA Blink LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P02 TimerA Blink LED1.out" WDT ==> WDT
+   "P02 TimerA Blink LED1.out" COMPARATORA ==> COMPARATORA
+   "P02 TimerA Blink LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P02 TimerA Blink LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P02 TimerA Blink LED1.out" NMI ==> NMI
+   "P02 TimerA Blink LED1.out" .reset ==> .reset
+Finished building: "P02 TimerA Blink LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P02 TimerA Blink LED1.out"
+ 
+Building files: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+Translating to Intel format...
+   "P02 TimerA Blink LED1.out" .text ==> .text
+   "P02 TimerA Blink LED1.out" .cinit ==> .cinit
+   "P02 TimerA Blink LED1.out" $fill000 ==> $fill000
+   "P02 TimerA Blink LED1.out" TRAPINT ==> TRAPINT
+   "P02 TimerA Blink LED1.out" PORT1 ==> PORT1
+   "P02 TimerA Blink LED1.out" PORT2 ==> PORT2
+   "P02 TimerA Blink LED1.out" ADC10 ==> ADC10
+   "P02 TimerA Blink LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P02 TimerA Blink LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P02 TimerA Blink LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P02 TimerA Blink LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P02 TimerA Blink LED1.out" WDT ==> WDT
+   "P02 TimerA Blink LED1.out" COMPARATORA ==> COMPARATORA
+   "P02 TimerA Blink LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P02 TimerA Blink LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P02 TimerA Blink LED1.out" NMI ==> NMI
+   "P02 TimerA Blink LED1.out" .reset ==> .reset
+Finished building: "P02 TimerA Blink LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P02 TimerA Blink LED1.out"
+ 
+Building files: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+Translating to Intel format...
+   "P02 TimerA Blink LED1.out" .text ==> .text
+   "P02 TimerA Blink LED1.out" .cinit ==> .cinit
+   "P02 TimerA Blink LED1.out" $fill000 ==> $fill000
+   "P02 TimerA Blink LED1.out" TRAPINT ==> TRAPINT
+   "P02 TimerA Blink LED1.out" PORT1 ==> PORT1
+   "P02 TimerA Blink LED1.out" PORT2 ==> PORT2
+   "P02 TimerA Blink LED1.out" ADC10 ==> ADC10
+   "P02 TimerA Blink LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P02 TimerA Blink LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P02 TimerA Blink LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P02 TimerA Blink LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P02 TimerA Blink LED1.out" WDT ==> WDT
+   "P02 TimerA Blink LED1.out" COMPARATORA ==> COMPARATORA
+   "P02 TimerA Blink LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P02 TimerA Blink LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P02 TimerA Blink LED1.out" NMI ==> NMI
+   "P02 TimerA Blink LED1.out" .reset ==> .reset
+Finished building: "P02 TimerA Blink LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P02 TimerA Blink LED1.out"
+ 
+Building files: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+Translating to Intel format...
+   "P02 TimerA Blink LED1.out" .text ==> .text
+   "P02 TimerA Blink LED1.out" .cinit ==> .cinit
+   "P02 TimerA Blink LED1.out" $fill000 ==> $fill000
+   "P02 TimerA Blink LED1.out" TRAPINT ==> TRAPINT
+   "P02 TimerA Blink LED1.out" PORT1 ==> PORT1
+   "P02 TimerA Blink LED1.out" PORT2 ==> PORT2
+   "P02 TimerA Blink LED1.out" ADC10 ==> ADC10
+   "P02 TimerA Blink LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P02 TimerA Blink LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P02 TimerA Blink LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P02 TimerA Blink LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P02 TimerA Blink LED1.out" WDT ==> WDT
+   "P02 TimerA Blink LED1.out" COMPARATORA ==> COMPARATORA
+   "P02 TimerA Blink LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P02 TimerA Blink LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P02 TimerA Blink LED1.out" NMI ==> NMI
+   "P02 TimerA Blink LED1.out" .reset ==> .reset
+Finished building: "P02 TimerA Blink LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P02 TimerA Blink LED1.out"
+ 
+Building files: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+Translating to Intel format...
+   "P02 TimerA Blink LED1.out" .text ==> .text
+   "P02 TimerA Blink LED1.out" .cinit ==> .cinit
+   "P02 TimerA Blink LED1.out" $fill000 ==> $fill000
+   "P02 TimerA Blink LED1.out" TRAPINT ==> TRAPINT
+   "P02 TimerA Blink LED1.out" PORT1 ==> PORT1
+   "P02 TimerA Blink LED1.out" PORT2 ==> PORT2
+   "P02 TimerA Blink LED1.out" ADC10 ==> ADC10
+   "P02 TimerA Blink LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P02 TimerA Blink LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P02 TimerA Blink LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P02 TimerA Blink LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P02 TimerA Blink LED1.out" WDT ==> WDT
+   "P02 TimerA Blink LED1.out" COMPARATORA ==> COMPARATORA
+   "P02 TimerA Blink LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P02 TimerA Blink LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P02 TimerA Blink LED1.out" NMI ==> NMI
+   "P02 TimerA Blink LED1.out" .reset ==> .reset
+Finished building: "P02 TimerA Blink LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P02 TimerA Blink LED1.out"
+ 
+Building files: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+Translating to Intel format...
+   "P02 TimerA Blink LED1.out" .text ==> .text
+   "P02 TimerA Blink LED1.out" .cinit ==> .cinit
+   "P02 TimerA Blink LED1.out" $fill000 ==> $fill000
+   "P02 TimerA Blink LED1.out" TRAPINT ==> TRAPINT
+   "P02 TimerA Blink LED1.out" PORT1 ==> PORT1
+   "P02 TimerA Blink LED1.out" PORT2 ==> PORT2
+   "P02 TimerA Blink LED1.out" ADC10 ==> ADC10
+   "P02 TimerA Blink LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P02 TimerA Blink LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P02 TimerA Blink LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P02 TimerA Blink LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P02 TimerA Blink LED1.out" WDT ==> WDT
+   "P02 TimerA Blink LED1.out" COMPARATORA ==> COMPARATORA
+   "P02 TimerA Blink LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P02 TimerA Blink LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P02 TimerA Blink LED1.out" NMI ==> NMI
+   "P02 TimerA Blink LED1.out" .reset ==> .reset
+Finished building: "P02 TimerA Blink LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P02 TimerA Blink LED1.out"
+ 
+Building files: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+Translating to Intel format...
+   "P02 TimerA Blink LED1.out" .text ==> .text
+   "P02 TimerA Blink LED1.out" .cinit ==> .cinit
+   "P02 TimerA Blink LED1.out" $fill000 ==> $fill000
+   "P02 TimerA Blink LED1.out" TRAPINT ==> TRAPINT
+   "P02 TimerA Blink LED1.out" PORT1 ==> PORT1
+   "P02 TimerA Blink LED1.out" PORT2 ==> PORT2
+   "P02 TimerA Blink LED1.out" ADC10 ==> ADC10
+   "P02 TimerA Blink LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P02 TimerA Blink LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P02 TimerA Blink LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P02 TimerA Blink LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P02 TimerA Blink LED1.out" WDT ==> WDT
+   "P02 TimerA Blink LED1.out" COMPARATORA ==> COMPARATORA
+   "P02 TimerA Blink LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P02 TimerA Blink LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P02 TimerA Blink LED1.out" NMI ==> NMI
+   "P02 TimerA Blink LED1.out" .reset ==> .reset
+Finished building: "P02 TimerA Blink LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P02 TimerA Blink LED1.out"
+ 
+Building files: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+Translating to Intel format...
+   "P02 TimerA Blink LED1.out" .text ==> .text
+   "P02 TimerA Blink LED1.out" .cinit ==> .cinit
+   "P02 TimerA Blink LED1.out" $fill000 ==> $fill000
+   "P02 TimerA Blink LED1.out" TRAPINT ==> TRAPINT
+   "P02 TimerA Blink LED1.out" PORT1 ==> PORT1
+   "P02 TimerA Blink LED1.out" PORT2 ==> PORT2
+   "P02 TimerA Blink LED1.out" ADC10 ==> ADC10
+   "P02 TimerA Blink LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P02 TimerA Blink LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P02 TimerA Blink LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P02 TimerA Blink LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P02 TimerA Blink LED1.out" WDT ==> WDT
+   "P02 TimerA Blink LED1.out" COMPARATORA ==> COMPARATORA
+   "P02 TimerA Blink LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P02 TimerA Blink LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P02 TimerA Blink LED1.out" NMI ==> NMI
+   "P02 TimerA Blink LED1.out" .reset ==> .reset
+Finished building: "P02 TimerA Blink LED1.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P02 TimerA Blink LED1.out' is up to date.
+gmake[1]: Nothing to be done for 'secondary-outputs'.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P02 TimerA Blink LED1 ****
+
+"C:\\ti\\ccs1010\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccs1010/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/TI/MSP430/G2553/P02 TimerA Blink LED1" --include_path="C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\Clock.h", line 51: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 52: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 53: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 133: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 134: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 135: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 146: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 147: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 148: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\TimerA.h", line 85: remark #1538-D: (ULP 10.1) ISR TA0_Interrupt calls function TA0_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"..\TimerA.h", line 175: remark #1538-D: (ULP 10.1) ISR TA1_Interrupt calls function TA1_Interrupt_Function. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 13: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"..\Clock.h", line 133 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 135 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 146 (col. 4): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"..\Clock.h", line 148 (col. 12): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Linker
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power="all" --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P02 TimerA Blink LED1.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccs1010/ccs/ccs_base/msp430/include" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P02 TimerA Blink LED1_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P02 TimerA Blink LED1.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P02 TimerA Blink LED1.out"
+ 
+Building files: "P02 TimerA Blink LED1.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccs1010/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P02 TimerA Blink LED1.hex"  "P02 TimerA Blink LED1.out" 
+Translating to Intel format...
+   "P02 TimerA Blink LED1.out" .text ==> .text
+   "P02 TimerA Blink LED1.out" .cinit ==> .cinit
+   "P02 TimerA Blink LED1.out" $fill000 ==> $fill000
+   "P02 TimerA Blink LED1.out" TRAPINT ==> TRAPINT
+   "P02 TimerA Blink LED1.out" PORT1 ==> PORT1
+   "P02 TimerA Blink LED1.out" PORT2 ==> PORT2
+   "P02 TimerA Blink LED1.out" ADC10 ==> ADC10
+   "P02 TimerA Blink LED1.out" USCIAB0TX ==> USCIAB0TX
+   "P02 TimerA Blink LED1.out" USCIAB0RX ==> USCIAB0RX
+   "P02 TimerA Blink LED1.out" TIMER0_A1 ==> TIMER0_A1
+   "P02 TimerA Blink LED1.out" TIMER0_A0 ==> TIMER0_A0
+   "P02 TimerA Blink LED1.out" WDT ==> WDT
+   "P02 TimerA Blink LED1.out" COMPARATORA ==> COMPARATORA
+   "P02 TimerA Blink LED1.out" TIMER1_A1 ==> TIMER1_A1
+   "P02 TimerA Blink LED1.out" TIMER1_A0 ==> TIMER1_A0
+   "P02 TimerA Blink LED1.out" NMI ==> NMI
+   "P02 TimerA Blink LED1.out" .reset ==> .reset
+Finished building: "P02 TimerA Blink LED1.out"
+ 
+
+**** Build Finished ****

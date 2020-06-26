@@ -1,10 +1,10 @@
------TI-REX started at Tue Jun 16 2020 12:47:58 GMT+0800 (中国标准时间)
-Tue, 16 Jun 2020 04:48:00 GMT connect deprecated methodOverride: use method-override npm module instead at app.js:647:21
+-----TI-REX started at Fri Jun 26 2020 15:11:37 GMT+0800 (中国标准时间)
+Fri, 26 Jun 2020 07:11:38 GMT connect deprecated methodOverride: use method-override npm module instead at app.js:647:21
 ily": "IPv4",
         "mac": "fa:94:c2:84:21:64",
         "internal": false
     }
 ]
------TI-REX started at Tue Jun 16 2020 12:47:58 GMT+0800 (中国标准时间)
+-----TI-REX started at Fri Jun 26 2020 15:11:37 GMT+0800 (中国标准时间)
 TIREX server listening on port 55432
 About to exit with code:  0

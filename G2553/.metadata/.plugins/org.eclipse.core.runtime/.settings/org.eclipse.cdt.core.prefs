@@ -1,6 +1,13 @@
+ToolChainManager/order/n=0
 build.all.configs.enabled=false
 build.proj.ref.configs.enabled=false
 eclipse.preferences.version=1
+errorparser.default.ids=org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.VCErrorParser;com.ti.ccstudio.errorparser.AsmErrorParser;com.ti.ccstudio.errorparser.CoffErrorParser;com.ti.ccstudio.errorparser.LinkErrorParser;com.ti.ccstudio.errorparser.SysConfigErrorParser;org.eclipse.rtsc.xdctools.parsers.ErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.MakeErrorParser
+includes.beginExportsPattern=IWYU\\s+(pragma\:?\\s+)?begin_exports?
+includes.endExportsPattern=IWYU\\s+(pragma\:?\\s+)?end_exports?
+includes.exportPattern=IWYU\\s+(pragma\:?\\s+)?export
+includes.keepPattern=IWYU\\s+(pragma\:?\\s+)?keep
+includes.privatePattern=IWYU\\s+(pragma\:?\\s+)?private(,\\s+include\\s+(?<header>\\S+))?
 indexer/indexAllFiles=true
 indexer/indexAllHeaderVersions=false
 indexer/indexAllVersionsSpecificHeaders=
@@ -15,6 +22,7 @@ indexer/skipReferences=false
 indexer/skipTypeReferences=false
 indexer/updatePolicy=0
 indexer/useHeuristicIncludeResolution=true
+language.settings.providers.workspace.prefs.toggle=true
 macros/workspace=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<macros/>\r\n
 org.eclipse.cdt.core.formatter.alignment_for_arguments_in_method_invocation=18
 org.eclipse.cdt.core.formatter.alignment_for_assignment=16
