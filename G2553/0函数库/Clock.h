@@ -20,7 +20,7 @@ void DCO_Adjust(int dco_x)
 		case 12:DCOCTL = CALDCO_12MHZ; break;
 		case 8:DCOCTL = CALDCO_8MHZ; break;
 		case 1:DCOCTL = CALDCO_1MHZ; break;
-		default:break;
+		default:DCOCTL = CALDCO_1MHZ; break;
 	}
 }
 
@@ -38,7 +38,7 @@ void MCLK_Init(int mclk_a)			 //a为初步设定MCLK，b为MCLK分频的DIVM
 		case 12:BCSCTL1 = CALBC1_12MHZ; CPU_freq = 12000000; break;
 		case 8:BCSCTL1 = CALBC1_8MHZ; CPU_freq = 8000000; break;
 		case 1:BCSCTL1 = CALBC1_1MHZ; CPU_freq = 1000000; break;
-		default:break;
+		default:BCSCTL1 = CALBC1_1MHZ; CPU_freq = 1000000; break;
 	}
 }
 
@@ -52,7 +52,7 @@ void MCLK_DIV(int divm_b)
 		case 2:BCSCTL2 |= DIVM_1; CPU_freq /= 2; break;
 		case 4:BCSCTL2 |= DIVM_2; CPU_freq /= 4; break;
 		case 8:BCSCTL2 |= DIVM_3; CPU_freq /= 8; break;
-		default:break;
+		default:BCSCTL2 |= DIVM_0; break;
 	}
 }
 
@@ -66,16 +66,17 @@ void SMCLK_DIV(int divs_c)
 		case 2:BCSCTL2 |= DIVS_1; break;
 		case 4:BCSCTL2 |= DIVS_2; break;
 		case 8:BCSCTL2 |= DIVS_3; break;
-		default:break;
+		default:BCSCTL2 |= DIVS_0; break;
 	}
 }
 
 //设置ACLK
 
-void ACLK_Init(int aclk_d)	//d为选择时钟源，e为设置ACLK分频
+void ACLK_Init(int aclk_d)	//aclk_d为选择时钟源
 {
 	//选择时钟源
-	if (aclk_d == 1)			//d=1时，选VLO为时钟源;d=0时，用外部晶振
+	//aclk_d=1时，选VLO为时钟源;d=0时，用外部晶振
+	if (aclk_d == 1)			
 	{
 		BCSCTL3 |= LFXT1S_2;
 	}
@@ -91,7 +92,7 @@ void ACLK_DIV(int diva_e)
 		case 2:BCSCTL1 |= DIVA_1; break;
 		case 4:BCSCTL1 |= DIVA_2; break;
 		case 8:BCSCTL1 |= DIVA_3; break;
-		default:break;
+		default:BCSCTL1 |= DIVA_0; break;
 	}
 }
 
@@ -124,26 +125,27 @@ void BCS_Init(int dco_x0,int mclk_a0,int divm_b0,int divs_c0,int aclk_d0,int div
 3.
 ********************************************************/
 
-/******************************************************/
-//延时ms
-/******************************************************/
+//延时******************************************************
+//volatile类型可防止编译器优化导致代码失效
+
+//延时ms******
+
 void Delay_ms(int timelong_ms)
 {
-	int x = 0;
-	double y = 0;
+	volatile int x = 0;
+	volatile double y = 0;
 	x = timelong_ms;
 	y = CPU_freq / 1000;
 	for (; x > 0; x--)
 		for (; y > 0; y--);
 }
 
-/******************************************************/
-//延时us
-/******************************************************/
+//延时us*******
+
 void Delay_us(int timelong_us)
 {
-	int x = 0;
-	double y = 0;
+	volatile int x = 0;
+	volatile double y = 0;
 	x = timelong_us;
 	y = CPU_freq / 1000000;
 	for (; x > 0; x--)

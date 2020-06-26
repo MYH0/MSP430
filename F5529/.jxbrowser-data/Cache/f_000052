@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html ng-app="launchpad_demo">
+
+<!--
+Copyright 2014 - 2015. Texas Instruments Incorporated. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+*   Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+*   Neither the name of Texas Instruments Incorporated nor the names of
+its contributors may be used to endorse or promote products derived
+from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<head lang="en">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>TI MSP430F5529 Temperature Monitoring Demo</title>
+
+    <!--
+    <link rel="stylesheet" href="stylesheets/main.less">
+    -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/rex.css">
+    <!-- bc:
+        <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
+        -->
+
+    <!--[if gte IE 6]>
+    <script type="text/javascript">
+        // this is IE greater than or equal to 6
+        var isInternetExplorer=true;
+    </script>
+    <![endif]-->
+
+    <script>
+        var isIE =   ((navigator.appName == 'Microsoft Internet Explorer') ||
+        ((navigator.appName == 'Netscape') &&
+        (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null)));
+        if (window.isInternetExplorer) {
+            isIE =  true;
+        }
+
+        if ( isIE ){
+            var object = document.createElement("object");
+            object.setAttribute("id", "ticloudagentlauncher");
+            object.setAttribute("type", "application/x-ticloudagentlauncher");
+            object.setAttribute("width", "0");
+            object.setAttribute("height", "0");
+            document.head.appendChild( object );
+            window.TICloudAgent_HACK = {};
+            window. TICloudAgent_HACK.plugin = document.getElementById("ticloudagentlauncher");
+        }
+    </script>
+    <link rel="import" href="../designer/components/polymer/polymer.html">
+    <script src="../designer/components/webcomponentsjs/webcomponents.js"></script>
+    <!-- if production:
+    <script src="/ticloudagent/getAgentJS?ver=1.0"></script>
+    -->
+
+
+    <script data-require="jquery@*" data-semver="2.0.3" src="assets/jquery/jquery-2.1.0.js"></script>
+
+    <link rel="import" href="../designer/components/ti-core-backplane/ti-core-backplane.html">
+    <link rel="import" href="../designer/components/ti-service-serialio/ti-service-serialio.html">
+    <link rel="import" href="../designer/components/paper-button/paper-button.html">
+    <link rel="import" href="../designer/components/core-icons/core-icons.html">
+    <link rel="import" href="../designer/components/ti-widget-menubar/ti-widget-menubar.html">
+    <link rel="import" href="../designer/components/ti-widget-menubar/ti-widget-optionsmenu.html">
+    <link rel="import" href="../designer/components/ti-widget-menubar/ti-widget-menuitem.html">
+    <link rel="import" href="../designer/components/ti-widget-menubar/ti-widget-menuaction.html">
+    <link rel="import" href="../designer/components/ti-core-stylesheets/ti-core-stylesheets.html">
+    <link rel="stylesheet" href="stylesheets/chart.css" />
+
+    <style type="text/css" media="screen, print, projection">
+        body,
+        html {
+            margin:0;
+            padding:0;
+        }
+        #wrap {
+            width:650px;
+            margin:0 auto;
+            top:24px;
+            position: relative;
+            z-index:1;
+        }
+        #sidebar {
+            float:left;
+            width:230px;
+            padding-top:40px;
+            position: relative;
+            z-index:1;
+            bottom: 50px;
+
+        }
+        #main {
+            float:right;
+            width:410px;
+            padding:11px;
+            position: relative;
+
+        }
+
+        /* override values imposed by bootstrap.min (for Firefox) */
+        ti-widget-statusbar .container {
+            color: white;
+        }
+        #ti_widget_menubar {
+            color:white;
+        }
+
+
+
+
+    </style>
+
+    <script>document.write('<base href="' + document.location + '" />');</script>
+
+    <script type='text/javascript' src="assets/flot/jquery.flot.min.js"></script>
+    <!-- NOTE:  DO NOT USE jquerty.flot.resize.min.js - it causes chart to be rendered with height-16px in FireFox
+    <script type='text/javascript' src="assets/flot/jquery.flot.resize.min.js"></script>
+    -->
+    <script type='text/javascript' src="assets/flot/jquery.flot.time.min.js"></script>
+
+    <script data-require="angular.js@1.2.x" src="assets/angular/angular.min.js" data-semver="1.2.16"></script>
+
+    <link rel="import" href="../designer/components/ti-core-backplane/ti-core-backplane.html">
+    <link rel="import" href="../designer/components/ti-service-serialio/ti-service-serialio.html">
+    <link rel="import" href="../designer/components/ti-service-programloader/ti-service-programloader.html">
+    <link rel="import" href="../designer/components/paper-dialog/paper-action-dialog.html">
+    <script type='text/javascript' src="../designer/components/ti-core-backplane/FileSaver.js"></script>
+    <script type='text/javascript' src="app_framework.js"></script>
+
+</head>
+<body unresolved ng-controller="AppFramework">
+<paper-action-dialog id="troubleshootingDialog" heading="Troubleshooting Suggestions" >
+    <p>Please try the following:</p>
+    <ul>
+        <li>close any other browser windows that are running this demo</li>
+        <li>close any applications such as mspdebug or Energia that are connected to your Launchpad.</li>
+        <li>unplug any TI devices or emulators that are connected to your computer other than your MSP430F5529 Launchpad.</li>
+        <li>ensure that you are connected to the internet</li>
+        <li>update your browser to the latest version</li>
+        <li>reload this page using your browser's refresh paper-button.</li>
+    </ul>
+
+    <p>If you are still having trouble connecting, please see the <a href="http://processors.wiki.ti.com/index.php/TI_Cloud_Agent_Troubleshooting_Guide" target="_blank">TI Cloud Agent wiki page</a>.</p>
+    <paper-button affirmative autofocus >Close</paper-button>
+
+</paper-action-dialog>
+
+<div id="optionsmenu">
+    <ti-widget-menubar style="width:100%" layout horizontal>
+        <ti-widget-optionsmenu layout>
+            <ti-widget-menuaction onclick="onSkipProgramDownloadOptionHdlr()" id="skipProgramDownloadMenuAction" alwaysenabled="true" name="Skip Program Download" description="Select this if target already has been flashed with the correct program" icon=""></ti-widget-menuaction>
+            <!--<ti-widget-menuitem id="tempScaleMenuItem" name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Temperature Scale" style="offset-before:24px;font-size:smaller;"> -->
+            <ti-widget-menuaction onclick="onCelsiusHdlr()" id="celsiusMenuAction" alwaysenabled="true" checked="false" name="&deg;C Temperature Scale" description="Celsius"></ti-widget-menuaction>
+            <ti-widget-menuaction onclick="onFarenheitHdlr()" id="farenheitMenuAction" alwaysenabled="true" checked="true" name="&deg;F Temperature Scale" description="Farenheit"></ti-widget-menuaction>
+            <ti-widget-menuaction onclick="onKelvinHdlr()" id="kelvinMenuAction" alwaysenabled="true" checked="false" name="&deg;K Temperature Scale" description="Kelvin"></ti-widget-menuaction>
+            <!-- </ti-widget-menuitem> -->
+        </ti-widget-optionsmenu>
+        <ti-widget-menuitem name="Help" id="ti_widget_menuitem" layout>
+            <ti-widget-menuaction name="Troubleshooting..." id="troubleshootingAction" icon="done-all" alwaysenabled="true" onclick="showTroubleshootingGuide()" description="Show troubleshooting guide"></ti-widget-menuaction>
+            <ti-widget-menuaction name="Online Help..." id="onlineHelpAction" icon="help" alwaysenabled="true" onclick="getHelp()" description="Online help"></ti-widget-menuaction>
+        </ti-widget-menuitem>
+    </ti-widget-menubar>
+
+</div>
+
+
+<div id="wrap" style="padding-top:30px;">
+
+    <div id="sidebar" align="center">
+
+        <p></p><b>{{boardName}}</b>
+        <canvas height="273" width="218" id="myCanvas"></canvas><br>
+        <!--
+        <select ng-model="selectedPort" ng-model-options="{ getterSetter: true }" ng-options="port.comName for port in serialPorts"></select>
+        <img src="images/refresh.gif"
+             alt="Click to refresh list of your computer's Serial Ports"
+             ng-click="listSerialPorts()">
+        -->
+
+        <!--                <div ng-show="isRestartButtonVisible"  align="center"> <paper-button role="button"  onclick="reloadPage()">Restart</paper-button> </div>  -->
+        <div ng-show="isDisconnectButtonVisible" align="center"> <paper-button role="button"  raised ng-click="onBtnDisconnectClicked()">Disconnect</paper-button></div>
+        <div ng-show="isConnectButtonVisible" align="center"> <paper-button role="button" raised ng-click="onBtnConnectClicked()">Connect</paper-button>
+        </div>
+
+        <p></p>
+    </div >
+    <div id="main" >
+        <!--            <h3>Temperature Monitoring Demo</h3><p></p> -->
+        <p></p>
+        <div ng-show="isConnectButtonVisible">
+            <div ng-hide="isTargetStatusVisible">
+                <div ng-hide="isInstallAgentVisible">
+
+                    <div ng-hide="isSupported">
+                        <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>Sorry, demos are not currently supported on Internet Explorer.<p>&nbsp;</p>
+                    </div>
+                    <div ng-show="isSupported">
+                        <div ng-hide="isMac">
+                            <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>Note: This demo requires the <b>{{deviceName}}</b> device.<p>&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-show="isTargetStatusVisible">
+        <b>Target Status:</b>  &nbsp; {{status}} <br>
+    </div>
+    <div  ng-show="isReplugNoticeVisible">
+    </div>
+    <div ng-show="isFlashButtonVisible"><p></p><paper-button role="button"   ng-click="flashDevice()">
+        <img src="../designer/components/ti-core-backplane/images/download16x19.png"/>&nbsp;Download the demo program</paper-button>
+    </div>
+    <div ng-show="isTimeoutNoticeVisible">
+	<!--
+        <p>&nbsp;</p>
+        <b>Troubleshooting Help:</b>
+        <p>&nbsp;</p>Please try the following:
+        <ul>
+            <li>close any other browser windows that are running this demo</li>
+            <li>close any applications such as mspdebug or Energia that are connected to your Launchpad.</li>
+            <li>ensure that you are connected to the internet</li>
+            <li>update your browser to the latest version</li>
+            <li>reload this page using your browser's refresh paper-button.</li>
+        </ul>
+
+        <p>&nbsp;</p>If you are still having trouble connecting, please see the <a href="http://processors.wiki.ti.com/index.php/TI_Cloud_Agent_Troubleshooting_Guide" target="_blank">TI Cloud Agent wiki page</a>.
+-->
+    </div>
+    <div ng-show="isGraphVisible"><h3><div  id="temperature">
+    </div>
+    </h3>
+        <p></p>
+        <ti-chart  data='data' ></ti-chart><br/>
+
+    </div>
+
+</div >
+
+</div>
+
+
+<div id="footer" align="right">
+
+    <ti-core-backplane id="ti-core-backplane" ></ti-core-backplane>
+    <ti-service-serialio id='serialIO'></ti-service-serialio>
+    <ti-service-programloader id='programLoader'></ti-service-programloader>
+</div>
+
+
+<script>
+    "use strict";
+    function reloadPage() {
+        window.location.reload(true);
+    }
+    var isInIframe = (window.location != window.parent.location) ? true : false;
+    var deviceInfo =
+    {
+        boardName: 'MSP-EXP430F5529LP',
+        deviceName: 'MSP430F5529',
+        fileName: 'ReadTemp_5529.cpp.hex',
+        fileFolderName: 'assets/',
+        startBtnName: 'P1.1',
+        msgWaitingForData: "Press the Start Button (P1.1 on your MSP-EXP430F5529LP Launchpad) to start reading the temperature - the Green LED should turn on.",
+        msgConnectDevice: "Please connect your MSP-EXP430F5529LP Launchpad to a USB port of your computer and then click Connect.",
+        imageFolderName:'images/',
+        boardImage: 'msp430f5529.jpg',
+        startBtnImage: 'startbutton-msp430f5529.jpg'
+    };
+
+    var menuBox = document.getElementById("menubox");
+    var sidebar = document.getElementById("sidebar");
+    var serialPortList = document.getElementById('serialPortList');
+    var baudRateList = document.getElementById('baudRateList');
+    var skipProgramDownloadMenuAction = document.getElementById("skipProgramDownloadMenuAction");
+    var scope = undefined;
+    $(document).ready(
+            function() {
+
+                var $element = $('body[ng-controller="AppFramework"]');
+                scope = angular.element($element).scope();
+                $("paper-button.main-nav").click(function() {
+
+                    menuBox.style.display = '';
+                    //sidebar.style.display = 'none';
+                    while (serialPortList.firstChild) {
+                        serialPortList.removeChild(serialPortList.firstChild);
+                    }
+                    while (baudRateList.firstChild) {
+                        baudRateList.removeChild(baudRateList.firstChild);
+                    }
+                    var html = "";
+                    var serialIO = window.serialIO;
+                    var selectedPort = 0;
+                    if ((serialIO) && (serialIO.serialPorts) && (serialIO.serialPorts.length > 0)) {
+                        for (var i = 0; i < serialIO.serialPorts.length; i++) {
+                            var port = serialIO.serialPorts[i];
+                            html += "<option value=\"" + port.comName + "\">" + port.comName + "</option>\n";
+                            var opt = document.createElement('option');
+                            opt.value = i;
+                            opt.text = port.comName;
+                            //opt.innerHTML = i;
+
+                            serialPortList.appendChild(opt);
+                            if (port.selected) {
+                                selectedPort = i;
+                                serialPortList.options[i].selected = true;
+                            }
+                        }
+                        //$("#formData").html(html);
+                        serialPortList.value = selectedPort;
+
+
+                        var selectedRate = -1;
+                        var indexOf9600 = 0;
+                        for (var i = 0; i < serialIO.baudRates.length; i++) {
+                            var baudRate = serialIO.baudRates[i];
+
+                            // override the default selected baud rate of 9600 to set the default as 115200
+                            //baudRateList.options[baudRateList.options.length] = new Option(baudRate.rate, i);
+                            var opt = document.createElement('option');
+                            opt.value = i;
+                            opt.text = baudRate.rate;
+                            if (baudRate.rate === "9600") {
+                                indexOf9600 = i;
+                            }
+                            //opt.innerHTML = i;
+
+                            baudRateList.appendChild(opt);
+                            if (baudRate.rate === window.serialIO.selectedBaudRate.rate) {//(baudRate.rate === '115200') {
+                                selectedRate = i;
+                                baudRateList.options[i].selected = true;
+                            } else {
+                                baudRateList.options[i].selected = false;
+                            }
+
+                        }
+                        if (selectedRate < 0) {
+                            selectedRate = indexOf9600;
+                        }
+                        baudRateList.value = selectedRate;
+                    }
+                    //$(".mobile-nav").style.display = '';
+                    // $(".mobile-nav").fadeIn(1000);
+                });
+                $("paper-button.close").click(function() {
+                    // $(".mobile-nav").fadeOut(1000);
+                    // $(".mobile-nav").style.display = 'none';
+                    if (skipProgramDownloadMenuAction.checked){
+                        if ((scope) && (window.programLoader) && (window.programLoader.currentState.name.indexOf("showDownloadProgramBtn") === 0)){
+                            window.programLoader.updateStateMachine('onSkipProgramDownloadBtnClicked');
+                            scope.isFlashButtonVisible = false;
+                            scope.onProgramDownloadComplete();
+                        }
+                    }
+                    menuBox.style.display = 'none';
+                    sidebar.style.display = '';
+
+                });
+            });
+
+    var onSkipProgramDownloadOptionHdlr = function(e){
+        skipProgramDownloadMenuAction.checked = !skipProgramDownloadMenuAction.checked;
+        var $element = $('body[ng-controller="AppFramework"]');
+        scope = angular.element($element).scope();
+        scope.options.skipProgramDownload = skipProgramDownloadMenuAction.checked;
+    };
+    var onCelsiusHdlr = function(e){
+        setTemperatureScale('C')
+    };
+    var onFarenheitHdlr = function(e){
+        setTemperatureScale('F')
+    };
+    var onKelvinHdlr = function(e){
+        setTemperatureScale('K')
+    };
+    var setTemperatureScale = function(tempScale){
+        var celsius = false;
+        var farenheit = false
+        var kelvin = false;
+        switch (tempScale){
+
+            case 'F': farenheit = true; break;
+            case 'C': celsius = true; break;
+            case 'K': kelvin = true; break;
+        }
+        document.getElementById("celsiusMenuAction").checked = celsius;
+        document.getElementById("farenheitMenuAction").checked = farenheit;
+        document.getElementById("kelvinMenuAction").checked = kelvin;
+        var $element = $('body[ng-controller="AppFramework"]');
+        scope = angular.element($element).scope();
+        scope.temperatureScale.selected = tempScale;
+    }
+    var getHelp = function(){
+        window.open("http://processors.wiki.ti.com/index.php/TI_Cloud_Agent_Troubleshooting_Guide");
+    }
+    var showTroubleshootingGuide = function(){
+        var dialog = document.getElementById("troubleshootingDialog");
+        dialog.toggle();
+    }
+</script>
+</body>
+</html>

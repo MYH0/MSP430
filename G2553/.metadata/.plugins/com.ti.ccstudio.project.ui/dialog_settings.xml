@@ -7,8 +7,8 @@
 	</section>
 	<section name="com.ti.ccstudio.project.ui.internal.wizards.importexport.ProjectImportPage">
 		<item key="CCS.BROWSE_DIRS_FILTER" value="C:\0Practice\Hardware\MSP430\G2553"/>
-		<item key="CCS.COPY_INTO_WORKSPACE" value="false"/>
-		<item key="CCS.IMPORT_REFERENCED_PROJECTS" value="false"/>
+		<item key="CCS.COPY_INTO_WORKSPACE" value="true"/>
+		<item key="CCS.IMPORT_REFERENCED_PROJECTS" value="true"/>
 		<item key="CCS.IMPORT_FROM_ARCHIVE" value="false"/>
 	</section>
 	<section name="com.ti.ccstudio.project.ui.internal.wizards.project.ProjectSettingsPage">

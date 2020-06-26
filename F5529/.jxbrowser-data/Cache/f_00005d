@@ -1,0 +1,691 @@
+"use strict";
+var app = angular.module('launchpad_demo', []);
+// the ngSanitize option allows the use of ng-bind-html directive with an https page
+app.controller('AppFramework', function($scope, $http, $location, $window, $timeout) {
+
+    $scope.isRunning = false;
+    $scope.isGraphVisible = false;
+
+    $scope.flotInitComplete = false;
+    $scope.isChartInitialized = false;
+    $scope.isInstallAgentVisible = false;
+    $scope.isTargetStatusVisible = false;  // set to true after the user clicks connect for the first time.
+    $scope.isDSready = false;
+
+    $scope.isConnectButtonVisible = true;
+    $scope.isRestartButtonVisible = false;
+    $scope.isDisconnectButtonVisible = false;
+    $scope.isFlashButtonVisible = false;
+    $scope.isReplugNoticeVisible = false;
+    $scope.isTimeoutNoticeVisible = false;
+    $scope.numBadValues = 0;
+    $scope.graphOptions = undefined;
+
+    window.myChart = undefined;
+    window.myChartOptions =  {
+        series: {
+            shadowSize: 1 // Drawing is faster without shadows
+        },
+        xaxis: {
+            mode: 'time',
+            timeformat: '%H:%M:%S',
+            tickSize: [5, "second"], // tick every minute
+            twelveHourClock: true,
+            timezone: "browser" // switch to using local time on plot
+        },
+        yaxis: {
+            min: 60,
+            max: 90
+        },
+        colors: ['#00bbcc']  //Pantone #3125 - see http://corpmkt.corp.ti.com/elements/colorPalette.shtml
+    };
+    window.myPlot = undefined;
+    $scope.jsonFileReadComplete = false;
+    $scope.temperatureScale = {selected:"F", previous:"F"};
+    $scope.options = {skipProgramDownload: false, autoOpenSerialPortDisabled: false};
+
+    $scope.hasInstallButtonBeenClicked = false;
+    $scope.title = 'Texas Instruments';
+    var newValue = '';
+    var debuggingEnabled = true;
+    var debugPrint = function (str) {
+        if (debuggingEnabled) {
+            console.log(str);
+        }
+    };
+    window.backplane = undefined;
+    window.serialIO = undefined;
+    window.programLoader = undefined;
+    $scope.isFireFox =  (navigator.userAgent.indexOf("Firefox") !== -1);
+    $scope.isSafari =  ((navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") == -1));
+    $scope.isNotSafari = ((!$scope.isSafari) ||($scope.isFireFox));
+    $scope.isMac =  (navigator.appVersion.indexOf("Mac") != -1);
+    $scope.isSupported = true;  // set to false if Internet Explorer is not supported.
+    $scope.isIE =   ((navigator.appName == 'Microsoft Internet Explorer') ||
+                    ((navigator.appName == 'Netscape') && (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null)));
+    if (window.isInternetExplorer){
+        $scope.isIE = true;
+    }
+
+    // Autoconnecting to the target has been disabled in order to avoid timing problems w.r.t. TICloudAgent establishing communication with
+    // the Chrome extension when the page is initially loaded.
+    $scope.isFirstTimeToConnect = false;//($scope.isNotSafari && $scope.isSupported); // set to true to auto-connect when first entering the page
+
+    var _rate = 9600;
+    var _comName;
+    _comName = 'COM 58';
+    $scope.selectedPort = {
+        rate: function (newRate) {
+            if (angular.isDefined(newRate)) {
+                _rate = newRate;
+                debugPrint('selectedPort.rate = ' + newRate);
+            }
+            return _rate;
+        },
+        comName: function (newComName) {
+            if (angular.isDefined(newComName)) {
+                _comName = newComName;
+                debugPrint('selectedPort.comName = ' + newComName);
+                ds.serial.open(defaultOutput, defaultPortOutput, { comName: selectedPort.comName, baudrate: selectedPort.rate }, function (error, serialPortInput) {
+                    var defaultPortInput = serialPortInput;
+                    debugPrint('ds.serial.open: serialPortInput.comName = ' + serialPortInput.comName);
+                    //$scope.graph(serialPortInput);
+
+                });
+
+            }
+            return _comName;
+        }
+    };
+
+    $scope.rxDataCount = 0;
+    $scope.temperature = 70;
+    var plot;
+
+    var requestID = 0;
+
+
+    $scope.setAddresses = function () {
+        $scope.loadAddress = "0";
+        $scope.runAddress = "0";
+
+        if ($scope.selectedDevice.name === "CC3200") {
+            $scope.loadAddress = "0x20004000";
+            $scope.runAddress = $scope.selectedFile === "blinky.bin" ? "0x2000624d" : "0x20010395";
+        }
+
+    };
+
+    $scope.onDeviceChanged = function () {
+        /* TODO:
+         $http.get("getFileNames?device="+$scope.selectedDevice.name).
+         success(function(data, status, headers, config) {
+         $scope.files = data;
+         $scope.selectedFile = $scope.files[0];
+         $scope.setAddresses();
+         }).
+         error(function(data, status, headers, config) {
+         throw "could not get file listing";
+         });
+         */
+    };
+    //$scope.selectedFile = 'ReadTempAndSendToSerialPort.cpp.hex';
+
+    //$scope.selectedDevice = $scope.devices[0];
+    if (deviceInfo === undefined){
+        throw "ERROR! deviceInfo not defined in index*.html";
+    }
+    $scope.selectedDevice = deviceInfo;
+    $scope.selectedFile = $scope.selectedDevice.fileName;
+    $scope.boardName = $scope.selectedDevice.boardName;//"MSP-EXP430G2 Launchpad";
+    $scope.deviceName = $scope.selectedDevice.deviceName;
+    $scope.onDeviceChanged();
+    $scope.out = "\n";
+
+    var wsRemote = null;
+
+    var consoleOutput = {
+        text: function (message) {
+            debugPrint(message);
+            $scope.$digest();
+        }
+    };
+
+    var pendingDataToSend = null;
+    $scope.isFlashComplete = false;
+    $scope.isEraseComplete = false;
+    $scope.downloadingStatusMsgPrefix = 'Downloading program into ' + $scope.boardName;
+    $scope.hasOpenSerialPortBeenCalled = false;
+
+    var httpGet = function (theUrl) {
+        var xmlHttp = null;
+
+        xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", theUrl, false);
+        xmlHttp.send(null);
+        return xmlHttp.responseText;
+    };
+
+
+    $scope.myTimeout = null;
+    $scope.onProgramDownloadComplete = function(){
+        debugPrint('app_framework: in onProgramDownloadComplete: hasOpenSerialPortBeenCalled = '+$scope.hasOpenSerialPortBeenCalled+', serialIO.currentStatus = '+window.serialIO.currentState.name);
+        if ((!$scope.options.autoOpenSerialPortDisabled) && ( !$scope.hasOpenSerialPortBeenCalled) && (window.serialIO.currentState.name.indexOf("serialPortReady") === 0)) {
+            window.serialIO.updateStateMachine('userOpenSerialPort');
+            $scope.hasOpenSerialPortBeenCalled = true;
+        }
+        $scope.status = $scope.msgWaitingForData;
+        drawBoardImage(1.0,$scope.selectedDevice.imageFolderName + $scope.selectedDevice.startBtnImage);
+        $scope.$digest();
+    };
+
+    $scope.onProgrammingStatusUpdate = function (error,text) {
+
+        debugPrint('app_framework: in callback from ds_loader.localServer.flash');
+        if (text) {
+            console.log('app_framework.g ds_loader.localServer.flash text = ' + text);
+            var lcText = text.toLowerCase();
+            if (lcText.indexOf('flash successful') >= 0) {
+                $scope.isFlashComplete = true;
+            }
+            else {
+                if (lcText.indexOf('erase successful') >= 0) {
+                    $scope.isEraseComplete = true;
+                    $timeout.cancel($scope.myTimeout);
+                    $scope.myTimeout = null;
+                    $scope.myTimeout = $timeout(function(){$scope.onProgrammingStatusUpdate({msg: 'Timeout waiting for mspdebug.'},"Timeout");},28000);
+                }
+            }
+            $scope.status = $scope.downloadingStatusMsgPrefix+': '+text;
+            $scope.$digest();
+        }
+        if (error) {
+            if ((error.msg !== undefined) && (error.msg !== null)) {
+                console.log('Error downloading program: error.msg=' + error.msg);
+            } else {
+                console.log('Error downloading program.  error.msg == null or undefined');
+            }
+            $scope.status = "Error downloading program: Please unplug your " + $scope.boardName + ', plug it back in, click Disconnect and try again.'+
+            '  Please also close any other windows that are running this demo and close any applications such as mspdebug or Energia that are connected to your Launchpad.';
+
+        } else {
+            if (($scope.isFlashComplete)&&(!$scope.hasOpenSerialPortBeenCalled)) {
+                debugPrint('app_framework: in callback from ds_loader.localServer.flash - no error.  Download complete.  About to open serial port');
+                $scope.status = "Download complete."
+                $scope.isFlashButtonVisible = false;
+                $timeout.cancel($scope.myTimeout);
+                $scope.myTimeout = null;
+                $scope.openSerialPort();
+                $scope.hasOpenSerialPortBeenCalled = true;
+            }
+        }
+        $scope.$digest();
+
+    };
+
+    /* User initiates flashing by clicking on the Download Program button */
+    $scope.flashDevice = function () {
+            if (window.programLoader) {
+                window.programLoader.updateStateMachine('onProgramDownloadBtnClicked');
+            }
+
+
+    };
+
+    $scope.status = "";
+    var ds = null;
+    $scope.temperature = "Temperature: ";
+
+    $scope.numDataWaitingTimeouts = 0;
+    $scope.serialDataTimeout = function(){
+        console.log('app_framework: timeout waiting for serial data.  about to close and reopen the serial port.')
+        $scope.myTimeout = null;
+        if ($scope.closeSerialPort !== undefined){
+            $scope.closeSerialPort();
+            $scope.numDataWaitingTimeouts++;
+        }
+        // wait 1 second to allow things to settle down
+        $timeout(function(){$scope.openSerialPort();},1000);
+
+    };
+
+    $scope.basicWaitingMsg = "Press the Start Button ("+$scope.selectedDevice.startBtnName+" on your "+$scope.boardName+") to start reading the temperature - the Green LED should turn on.";
+    $scope.msgWaitingForData = $scope.selectedDevice.msgWaitingForData;
+    $scope.serialOut = "\n";
+
+    $scope.clearSerial = function () {
+        $scope.serialOut = "\n";
+    };
+    var lastTempDisplayUpdateTime = Date.now();
+
+    $scope.serialPortOutputHdlr = {
+        text: function (message) {
+            if ($scope.myTimeout !== null){
+                $timeout.cancel($scope.myTimeout);
+                $scope.myTimeout = null;
+            }
+            //$scope.serialOut += message;
+            var n = 0;
+            //debugPrint('in $scope.serialPortOutput: message = '+message);
+
+            var debugStr = '';
+            var NUM_VALUES_TO_PLOT = 256;//512;
+            if (!$scope.isRunning) {
+                $scope.isRunning = true;
+
+            }
+
+            var data = message.split('');
+            //debugPrint('in $scope.serialPortOutput: message = ' + message);
+            //debugPrint('in $scope.serialPortOutput: data.length = '+data.length+',data = '+data);
+            while (n < data.length) {
+                //debugPrint('in $scope.serialPortOutput: n = '+n+',datavalue[4] = '+data[4]);
+                var charCode = data[n].charCodeAt(0);
+                if (((charCode >= 0x30 ) && (charCode <= 0x39))||(charCode == '.'.charCodeAt(0))) {
+
+                    newValue += data[n];
+                    if (newValue.length == 4) {
+                        if (newValue[2] != '.') {
+                            debugPrint('in $scope.serialPortOutput: n = ' + n + ',newValue = ' + newValue + ', discarding character '+newValue.charCodeAt(0));
+                            newValue = newValue.substring(1,newValue.length);
+                        } else {
+                            //debugPrint('in $scope.serialPortOutput: n = ' + n + ',newValue = ' + newValue + ', from ' + debugStr);
+                            // prevent bad values (e.g. 0) from being plotted
+
+                            if (parseFloat(newValue) <= 20) {
+                                $scope.numBadValues++;
+                                //console.log('Discarding bad value ('+newValue+').  Total number of bad values = '+$scope.numBadValues);
+                            } else {
+                                var t = Date.now();
+                                var degrees = '&degF';
+                                var tempValue;
+                                switch ($scope.temperatureScale.selected) {
+                                    case "F":
+                                        degrees = '&degF';
+                                        break;
+                                    case "C":
+                                        degrees = '&degC';
+                                        tempValue = (newValue - 32) * 5 / 9;
+                                        newValue = tempValue.toFixed(1);
+                                        break;
+                                    case "K":
+                                        degrees = '&degK';
+                                        tempValue = (newValue - 32) * 5 / 9 + 273.15;
+                                        newValue = tempValue.toFixed(1);
+                                        break;
+                                }
+                                //if ($scope.temperatureScale.selected === $scope.temperatureScale.previous) {
+                                    $scope.data.push([t, newValue]);
+                                //}
+                                if ((t - lastTempDisplayUpdateTime) > 1000) {
+                                    document.getElementById("temperature").innerHTML = "Temperature: " + newValue + degrees;//' &degF';
+                                    lastTempDisplayUpdateTime = t;
+                                }
+                                //$scope.data.push([t, newValue]);
+                                $scope.rxDataCount++;
+
+                                if ($scope.data.length > NUM_VALUES_TO_PLOT) {
+                                    $scope.data.shift();
+                                }
+                             //   $scope.rxDataCount++;
+                                $scope.$digest();
+                                newValue = '';
+                            }
+                        }
+                    }
+                    //}
+                }
+                n++;
+            }
+
+        }
+            //$scope.$digest();
+
+    };
+
+    $scope.openSerialPort = function() {
+        window.serialIO.updateStateMachine('userOpenSerialPort');
+    };
+
+    $scope.closeSerialPort = function() {
+        window.serialIO.updateStateMachine('userCloseSerialPort');
+    };
+
+    $scope.onBtnConnectClicked = function() {
+        if ((window.backplane) && ($scope.isSupported)) {
+            $scope.isTargetStatusVisible = true;
+            $scope.isReplugNoticeVisible = false;
+            $scope.isTimeoutNoticeVisible = false;
+            $scope.isInstallAgentVisible = false;  //hidden = true
+            if ($scope.data.length > 0) {
+                var lastTemp = $scope.data[$scope.data.length-1];
+                while ($scope.data.length > 0) {
+                    $scope.data.pop();
+                }
+            }
+            window.backplane.updateStateMachine('onConnectBtnClicked');
+           // $scope.$digest();
+        }
+    };
+    $scope.onBtnDisconnectClicked = function () {
+        drawBoardImage(0.4,$scope.selectedDevice.imageFolderName+$scope.selectedDevice.boardImage);
+
+        if (window.backplane) {
+            window.backplane.updateStateMachine('onDisconnectBtnClicked');
+
+            $scope.hasOpenSerialPortBeenCalled = false;
+            $scope.isRunning = false;
+            $scope.rxDataCount = 0;
+            $scope.numBadValues = 0;
+            $scope.flotInitComplete = false;
+            $scope.isGraphVisible = false;
+            //$scope.$digest();  This causes errors
+        }
+    };
+    $scope.onBtnInstallBrowserExtensionClicked = function() {
+        if (window.backplane) {
+            window.backplane.installBrowserExtension();
+            $scope.hasInstallButtonBeenClicked = true;
+            //$scope.$digest(); - causes an angularjs error
+        }
+    };
+    $scope.onBtnDownloadInstallerClicked = function () {
+        if (window.backplane) {
+            window.backplane.downloadTICloudAgentInstaller();
+            $scope.hasInstallButtonBeenClicked = true;
+            //$scope.$digest(); - causes an angularjs error
+        }
+    };
+
+    $scope.connectionStatusChangedHdlr = function (e) {
+
+    };
+    $scope.onSerialPortsReadyToBeOpenedHdlr = function(e) {
+        // notify the program loader that the target is ready to be programmed
+        window.programLoader.setUserAction("onTargetReady");
+    }
+
+    $scope.serialPortVisibilityChangedHdlr = function (e) {
+        if ((window.serialIO.isSerialPortUIVisible) && (!$scope.hasOpenSerialPortBeenCalled)
+             && ($scope.options.skipProgramDownload)){
+            $scope.onProgramDownloadComplete();
+        }
+        $scope.$digest();
+    };
+    $scope.timeoutWaitingForCloudAgentHdlr = function(){
+       $scope.isTimeoutNoticeVisible = true;
+    };
+    $scope.replugNoticeHdlr = function(e){
+
+        if( (window.serialIO.isReplugNoticeVisible) || (window.programLoader.isReplugNoticeVisible)) {
+            $scope.isReplugNoticeVisible = true;
+            var errStr = window.serialIO.status.toLowerCase();
+            if ((errStr.indexOf("failed") >= 0)||(errStr.indexOf("err") > 0)){
+                $scope.isInstallAgentVisible = true;
+                $scope.isRestartButtonVisible = true;
+                $scope.isConnectButtonVisible = false;
+            }
+        } else {
+            $scope.isReplugNoticeVisible = false;
+        }
+        $scope.$digest();
+    };
+
+    $scope.statusChangedHdlr = function (e) {
+        if (window.backplane) {
+            if ((e.currentTarget.tagName == 'TI-SERVICE-PROGRAMLOADER') && (window.backplane.isDisconnectBtnVisible)) {
+                $scope.status = window.programLoader.status;
+            } else {
+                if ((e.currentTarget.tagName == 'TI-SERVICE-SERIALIO') && (window.backplane.isDisconnectBtnVisible)) {
+                    if (window.serialIO.status.indexOf("Running") < 0) {
+                        $scope.status = window.serialIO.status;
+                    }
+                } else {
+                    if (!$scope.isReplugNoticeVisible) {
+                         // don't overwrite status if there has been a problem.
+                        $scope.status = window.backplane.status;
+                    }
+                }
+            }
+        }
+        $scope.$digest();
+    };
+    $scope.currentStateChangedHdlr = function (e) {
+        //var backplane = e.currentTarget;
+       // currentStateDiv.innerHTML = backplane.currentState.name;
+        /*
+        if (window.backplane) {
+            switch (window.backplane.currentState.name) {
+                case 'downloadTICloudAgent':
+                    if ((!window.backplane.isAutoDownloadEnabled) && (!window.backplane.isProgramDownloadDisabled)) {
+                        $scope.status = "Could not connect to TI Cloud Agent.";
+                        $scope.isTargetStatusVisible = true;
+                        $scope.isInstallAgentVisible = true;  //hidden = false
+                        $scope.isRestartButtonVisible = true;
+                        $scope.isConnectButtonVisible = false;
+                    }
+                    break;
+            }
+        }
+        */
+        $scope.$digest();
+
+    };
+
+    $scope.btnVisibilityChangedHdlr = function () {
+        if (window.backplane) {
+            if (window.backplane.isConnectBtnVisible) {
+                $scope.isConnectButtonVisible = true;
+                $scope.isDisconnectButtonVisible = false;
+                $scope.isGraphVisible = false;
+                $scope.isFlashButtonVisible = false;
+                drawBoardImage(0.4,$scope.selectedDevice.imageFolderName+$scope.selectedDevice.boardImage);
+            } else {
+                $scope.isConnectButtonVisible = false;
+            }
+
+            if (window.backplane.isDisconnectBtnVisible) {
+                if (!$scope.isFirstTimeToConnect) {
+                    $scope.isDisconnectButtonVisible = true;
+                } else {
+                    $scope.isFirstTimeToConnect = false;
+                }
+                $scope.isConnectButtonVisible = false;
+                drawBoardImage(1.0,$scope.selectedDevice.imageFolderName+$scope.selectedDevice.boardImage);
+
+            } else {
+                $scope.isDisconnectButtonVisible = false;
+            }
+
+            if (window.backplane.isCloudAgentDownloadBtnVisible) {
+                $scope.isInstallAgentVisible = true;
+                $scope.isGraphVisible = false;
+                $scope.isFlashButtonVisible = false;
+                $scope.isRestartButtonVisible = true;
+                $scope.isConnectButtonVisible = false;
+
+            } else {
+                $scope.isInstallAgentVisible = false;
+            }
+        }
+
+        if (window.serialIO) {
+            if ((window.backplane.isDisconnectBtnVisible) && (window.serialIO.isSerialPortUIVisible)){
+                $scope.isGraphVisible = true;
+            } else {
+                $scope.isGraphVisible = false;
+            }
+        }
+        $scope.$digest();
+    };
+
+    $scope.programDownloadBtnVisibilityChangedHdlr = function(){
+        if (window.programLoader) {
+            console.log('myProgramDownloadBtnVisibilityChangedHdlr called: isProgramDownloadBtnVisible = '+window.programLoader.isProgramDownloadBtnVisible)
+            if (window.programLoader.isProgramDownloadBtnVisible) {
+                if ($scope.options.skipProgramDownload){
+                    $scope.isFlashButtonVisible = false;
+                    scope.onProgramDownloadComplete();
+                } else {
+                    $scope.isFlashButtonVisible = true;
+                }
+            } else {
+                $scope.isFlashButtonVisible = false;
+            }
+            $scope.$digest();
+        }
+    };
+
+    // start DebugServer after page has loaded
+    var drawBoardImage = function (opacity,src) {
+        var myCanvas = document.getElementById("myCanvas");
+        var ctx = myCanvas.getContext("2d");
+        ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+        var img = new Image();
+        img.src = src;
+        img.onload = function () {
+            ctx.save();
+            ctx.globalAlpha = opacity;
+            ctx.drawImage(img, 0, 0);
+            ctx.restore()
+        };
+
+    };
+
+    drawBoardImage(0.4,$scope.selectedDevice.imageFolderName+$scope.selectedDevice.boardImage);
+
+    window.addEventListener('polymer-ready', function() {
+        console.log("ABOUT TO START DEMO!");
+        var i;
+        window.backplane = document.getElementById('ti-core-backplane');
+        window.serialIO = document.getElementById("serialIO");
+        window.programLoader = document.getElementById("programLoader");
+        window.serialIO.backplane = window.backplane;
+        window.programLoader.backplane = window.backplane;
+        window.programLoader.waitForTargetReady = true;
+
+        // can't use document.querySelector for backplane because it is in its own ShadowDOM
+        // which is not accessible from here.
+        // for more info, see http://stackoverflow.com/questions/24646081/polymer-document-queryselector-not-working-as-expected
+        window.serialIO.serialPortTextOutputHdlr = $scope.serialPortOutputHdlr;
+        window.backplane.selectedDevice = $scope.selectedDevice;
+        window.serialIO.selectedDevice = $scope.selectedDevice;
+        window.programLoader.selectedDevice = $scope.selectedDevice;
+
+        window.backplane.addEventListener("statusMsgUpdated", $scope.statusChangedHdlr);
+        window.backplane.addEventListener("currentStateUpdated", $scope.currentStateChangedHdlr);
+        window.backplane.addEventListener("connectionStatusChanged", $scope.connectionStatusChangedHdlr);
+        window.backplane.addEventListener("btnVisibilityChanged", $scope.btnVisibilityChangedHdlr);
+        window.backplane.addEventListener("onTimeoutWaitingForCloudAgent", $scope.timeoutWaitingForCloudAgentHdlr);
+        window.serialIO.addEventListener('replugNoticeVisibilityChanged', $scope.replugNoticeHdlr);
+        window.serialIO.addEventListener("serialPortUIVisibilityChanged", $scope.serialPortVisibilityChangedHdlr);
+        window.serialIO.addEventListener("statusMsgUpdated", $scope.statusChangedHdlr);
+        window.serialIO.addEventListener("serialPortsReadyToBeOpened", $scope.onSerialPortsReadyToBeOpenedHdlr);
+        window.programLoader.addEventListener("statusMsgUpdated", $scope.statusChangedHdlr);
+        window.programLoader.addEventListener("programDownloadUIVisibilityChanged",$scope.programDownloadBtnVisibilityChangedHdlr);
+        window.programLoader.addEventListener("programDownloadComplete",$scope.onProgramDownloadComplete);
+        window.programLoader.addEventListener("programDownloadFailed",$scope.replugNoticeHdlr);
+        window.programLoader.addEventListener('replugNoticeVisibilityChanged', $scope.replugNoticeHdlr);
+        // automatically try to connect to the cloud agent upon startup
+        if ($scope.isFirstTimeToConnect) {  // set isFirstTimeToConnect to false to disable auto-connecting when the demo page is first viewed.
+            $scope.onBtnConnectClicked();
+            $scope.isDisconnectButtonVisible = false;
+        }
+    });
+    $scope.data = [];
+
+
+    $scope.startCloudAgent = function () {
+        $scope.status = "Connecting....";
+        $scope.isConnectButtonVisible = false;
+        $scope.isDisconnectButtonVisible = true;
+        $scope.isInstallAgentVisible = false;
+        $scope.isRestartButtonVisible = false;
+
+        $scope.ds_loader.localServer.startTICloudAgent();
+        $timeout($scope.dsInit, 10000);
+    }
+
+    $scope.$watch('rxDataCount', function(newVal, oldVal) {
+
+
+        if ((newVal % 256) == 0) {
+            debugPrint("rxDataCount = " + newVal+', numBadValues = '+$scope.numBadValues);
+        }
+        if ((myChart !== undefined)&&($scope.isRunning)) {
+            if ($scope.rxDataCount > 20) {
+                if (!$scope.isGraphVisible){
+                    $scope.isGraphVisible = true;
+                    drawBoardImage(1.0,$scope.selectedDevice.imageFolderName+$scope.selectedDevice.boardImage);
+                    $scope.status = "Running...";
+                    // don't call $scope.$digest(); here as this is in the watch which is triggered by $scope.$digest...
+                }
+                if (myPlot !== undefined) {
+                    if (($scope.temperatureScale.previous !== $scope.temperatureScale.selected) ) {
+                        var minF = 60;
+                        var maxF = 90;
+                        var newMin = minF;
+                        var newMax = maxF;
+
+                        switch ($scope.temperatureScale.selected) {
+                            case "F":
+                                myPlot.getOptions().yaxes[0].min = minF;
+                                myPlot.getOptions().yaxes[0].max = maxF;
+                                break;
+                            case "C":
+                                newMin = (minF-32)*5/9;
+                                myPlot.getOptions().yaxes[0].min = newMin.toFixed(1);
+                                newMax = (maxF-32)*5/9;
+                                myPlot.getOptions().yaxes[0].max = newMax.toFixed(1);
+                                break;
+                            case "K":
+                                newMin = (minF - 32) * 5 / 9 + 273.15;
+                                myPlot.getOptions().yaxes[0].min = newMin.toFixed(1);
+                                newMax = (maxF - 32) * 5 / 9 + 273.15;
+                                myPlot.getOptions().yaxes[0].max = newMax.toFixed(1);
+                                break;
+                        }
+                        $scope.rxDataCount = 0;
+                        $scope.temperatureScale.previous = $scope.temperatureScale.selected;
+                        $scope.data[0] = $scope.data[$scope.data.length-1];
+                        $scope.data[1] = $scope.data[0];
+                        while ($scope.data.length > 2){
+                            $scope.data.pop();
+                        }
+
+                    } else {
+                        myPlot.setData([$scope.data]);
+                        myPlot.setupGrid();
+                        myPlot.draw();
+                   }
+                }
+            }
+         }
+    });
+});
+app.directive('tiChart', function() {
+    return{
+        restrict: 'E',
+        replace: true,
+        //template: '<div height="400">'
+        scope: true,
+        link: function(scope, elem, attrs) {
+            scope.$watch('data', function() {
+                window.myChart = elem;
+                
+                if (!scope.flotInitComplete){
+                    var t = Date.now();
+                    var newData = [
+                        [t, 65],
+                        [t + 1, 65],
+                        [t + 2, 65]
+                    ];
+                    window.myPlot = $.plot(elem, newData, window.myChartOptions);
+                    scope.flotInitComplete = true;
+                    //$.plot.setupGrid();
+                    elem.show();
+                }
+            },true)
+        }
+    };
+});

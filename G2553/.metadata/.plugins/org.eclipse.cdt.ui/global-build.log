@@ -18596,3 +18596,1569 @@ gmake[1]: 'P8 WDT Keyboard.out' is up to date.
 gmake[1]: 'P9 WDT Long-Short Keyboard.out' is up to date.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P10 LCD1602" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 35: error #20: identifier "P2OUT" is undefined
+"../main.c", line 35: error #20: identifier "BIT0" is undefined
+"../main.c", line 36: error #20: identifier "P1OUT" is undefined
+"../main.c", line 38: error #20: identifier "BIT2" is undefined
+"../main.c", line 37: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 39: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 46: error #20: identifier "P2OUT" is undefined
+"../main.c", line 46: error #20: identifier "BIT0" is undefined
+"../main.c", line 47: error #20: identifier "P1OUT" is undefined
+"../main.c", line 49: error #20: identifier "BIT2" is undefined
+"../main.c", line 48: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 50: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 56: error #20: identifier "DCOCTL" is undefined
+"../main.c", line 56: error #20: identifier "CALDCO_1MHZ" is undefined
+"../main.c", line 57: error #20: identifier "BCSCTL1" is undefined
+"../main.c", line 57: error #20: identifier "CALBC1_1MHZ" is undefined
+"../main.c", line 58: error #20: identifier "P1DIR" is undefined
+"../main.c", line 59: error #20: identifier "P2DIR" is undefined
+"../main.c", line 59: error #20: identifier "BIT0" is undefined
+"../main.c", line 59: error #20: identifier "BIT1" is undefined
+"../main.c", line 59: error #20: identifier "BIT2" is undefined
+"../main.c", line 61: error #20: identifier "P2OUT" is undefined
+"../main.c", line 69: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 72: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 75: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 78: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 83: error #20: identifier "WDTCTL" is undefined
+"../main.c", line 83: error #20: identifier "WDTPW" is undefined
+"../main.c", line 83: error #20: identifier "WDTHOLD" is undefined
+"../main.c", line 85: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+21 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P10 LCD1602" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> write_dat
+   "../main.c"   ==> write_com
+   "../main.c"   ==> LCD_init
+   "../main.c"   ==> main
+"../main.c", line 37: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 39: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 48: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 50: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 69: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 72: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 75: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 78: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 85: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "P10 LCD1602.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P10 LCD1602.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P10 LCD1602_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P10 LCD1602.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P10 LCD1602.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P10 LCD1602.hex"  "P10 LCD1602.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P10 LCD1602" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> write_dat
+   "../main.c"   ==> write_com
+   "../main.c"   ==> LCD_init
+   "../main.c"   ==> main
+"../main.c", line 37: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 39: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 48: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 50: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 69: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 72: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 75: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 78: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 85: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "P10 LCD1602.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P10 LCD1602.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P10 LCD1602_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P10 LCD1602.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P10 LCD1602.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P10 LCD1602" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> write_dat
+   "../main.c"   ==> write_com
+   "../main.c"   ==> LCD_init
+   "../main.c"   ==> main
+"../main.c", line 37: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 40: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P1OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 41: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 52: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 55: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P1OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 56: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 77: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 80: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 83: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 86: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 93: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "P10 LCD1602.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P10 LCD1602.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P10 LCD1602_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P10 LCD1602.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P10 LCD1602.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P10 LCD1602.hex"  "P10 LCD1602.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P10 LCD1602" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> write_dat
+   "../main.c"   ==> write_com
+   "../main.c"   ==> LCD_init
+   "../main.c"   ==> main
+"../main.c", line 37: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 40: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P1OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 41: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 52: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 55: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P1OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 56: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 77: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 80: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 83: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 86: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 93: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "P10 LCD1602.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P10 LCD1602.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P10 LCD1602_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P10 LCD1602.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P10 LCD1602.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P10 LCD1602" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> write_dat
+   "../main.c"   ==> write_com
+   "../main.c"   ==> LCD_init
+   "../main.c"   ==> main
+"../main.c", line 30: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 33: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P1OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 34: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 45: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 48: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P1OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 49: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 70: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 73: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 76: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 79: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 86: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "P10 LCD1602.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P10 LCD1602.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P10 LCD1602_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P10 LCD1602.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P10 LCD1602.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P10 LCD1602" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 1: error #41: expected an identifier
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include/intrinsics.h", line 53: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 239: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 251: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 251: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P10 LCD1602" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> delay_nms
+   "../main.c"   ==> delay_1us
+   "../main.c"   ==> delay_nus
+   "../main.c"   ==> LCD_en_write1
+   "../main.c"   ==> LCD_en_write2
+   "../main.c"   ==> LCD_write_command
+   "../main.c"   ==> LCD_init_first
+   "../main.c"   ==> LCD_init
+   "../main.c"   ==> LCD_set_xy
+   "../main.c"   ==> LCD_write_data
+   "../main.c"   ==> LCD_write_string
+   "../main.c"   ==> main
+   "../main.c"   ==> delay_1ms
+   "../main.c"   ==> LCD_write_char
+"../main.c", line 239: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 251: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 251: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+warning: "../main.c", line 228: Assembly statement "nop" creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+warning: "../main.c", line 228: Assembly statement "nop" creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+Finished building: "../main.c"
+ 
+Building target: "P10 LCD1602.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P10 LCD1602.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P10 LCD1602_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P10 LCD1602.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P10 LCD1602.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P10 LCD1602.hex"  "P10 LCD1602.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P10 LCD1602" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> delay_nms
+   "../main.c"   ==> delay_1us
+   "../main.c"   ==> delay_nus
+   "../main.c"   ==> LCD_en_write1
+   "../main.c"   ==> LCD_en_write2
+   "../main.c"   ==> LCD_write_command
+   "../main.c"   ==> LCD_init_first
+   "../main.c"   ==> LCD_init
+   "../main.c"   ==> LCD_set_xy
+   "../main.c"   ==> LCD_write_data
+   "../main.c"   ==> LCD_write_string
+   "../main.c"   ==> main
+   "../main.c"   ==> delay_1ms
+   "../main.c"   ==> LCD_write_char
+"../main.c", line 239: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 251: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 251: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+warning: "../main.c", line 228: Assembly statement "nop" creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+warning: "../main.c", line 228: Assembly statement "nop" creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+Finished building: "../main.c"
+ 
+Building target: "P10 LCD1602.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P10 LCD1602.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P10 LCD1602_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P10 LCD1602.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P10 LCD1602.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P10 LCD1602" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> write_dat
+   "../main.c"   ==> write_com
+   "../main.c"   ==> LCD_init
+   "../main.c"   ==> main
+"../main.c", line 30: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 32: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 41: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 43: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 62: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 65: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 68: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 71: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 78: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "P10 LCD1602.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P10 LCD1602.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P10 LCD1602_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P10 LCD1602.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P10 LCD1602.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P10 LCD1602" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> write_dat
+   "../main.c"   ==> write_com
+   "../main.c"   ==> LCD_init
+   "../main.c"   ==> main
+"../main.c", line 30: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 33: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P1OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 34: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 45: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 48: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P1OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 49: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 70: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 73: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 76: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 79: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 86: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "P10 LCD1602.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P10 LCD1602.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P10 LCD1602_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P10 LCD1602.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P10 LCD1602.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/P10 LCD1602" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> WaitForEnable
+   "../main.c"   ==> write_data
+   "../main.c"   ==> zifuchuan
+   "../main.c"   ==> write_com
+   "../main.c"   ==> Write1602
+   "../main.c"   ==> write_year
+   "../main.c"   ==> write_week
+   "../main.c"   ==> write_second
+   "../main.c"   ==> write_month
+   "../main.c"   ==> write_minute
+   "../main.c"   ==> write_hour
+   "../main.c"   ==> write_day
+   "../main.c"   ==> delay
+   "../main.c"   ==> Write_Byte
+   "../main.c"   ==> Read_Byte
+   "../main.c"   ==> read_1302add
+   "../main.c"   ==> readyear
+   "../main.c"   ==> readweek
+   "../main.c"   ==> readsecond
+   "../main.c"   ==> readminute
+   "../main.c"   ==> readhour
+   "../main.c"   ==> readday
+   "../main.c"   ==> readmonth
+   "../main.c"   ==> readtime
+   "../main.c"   ==> LcdReset
+   "../main.c"   ==> Write_dat
+   "../main.c"   ==> init_1302
+   "../main.c"   ==> main
+   "../main.c"   ==> Reset_DS1302
+   "../main.c"   ==> Delay5ms
+"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 169: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 174: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 191: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 327: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 334: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 342: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 343: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 350: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 351: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 358: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 359: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 366: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 367: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "P10 LCD1602.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P10 LCD1602.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P10 LCD1602_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P10 LCD1602.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P10 LCD1602.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P10 LCD1602 ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P10 LCD1602.out' is up to date.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "P10 LCD1602.hex"  "P10 LCD1602.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/A1 Calender" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> write_data
+   "../main.c"   ==> Write1602
+   "../main.c"   ==> delay
+   "../main.c"   ==> read_1302add
+   "../main.c"   ==> Write_dat
+   "../main.c"   ==> main
+"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 169: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 174: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 191: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 327: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 334: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 342: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 343: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 350: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 351: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 358: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 359: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 366: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 367: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "A1 Calender.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"A1 Calender.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="A1 Calender_linkInfo.xml" --use_hw_mpy=none --rom_model -o "A1 Calender.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "A1 Calender.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "A1 Calender.hex"  "A1 Calender.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/A1 Calender" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> write_data
+   "../main.c"   ==> Write1602
+   "../main.c"   ==> delay
+   "../main.c"   ==> read_1302add
+   "../main.c"   ==> Write_dat
+   "../main.c"   ==> main
+"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 169: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 174: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 191: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 327: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 334: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 342: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 343: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 350: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 351: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 358: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 359: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 366: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 367: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "A1 Calender.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"A1 Calender.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="A1 Calender_linkInfo.xml" --use_hw_mpy=none --rom_model -o "A1 Calender.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "A1 Calender.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/A1 Calender" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> write_data
+   "../main.c"   ==> Write1602
+   "../main.c"   ==> delay
+   "../main.c"   ==> Write_Byte
+   "../main.c"   ==> read_1302add
+   "../main.c"   ==> Write_dat
+   "../main.c"   ==> write_week
+   "../main.c"   ==> main
+"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 169: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 174: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 191: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 327: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 334: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 342: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 343: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 350: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 351: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 358: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 359: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 366: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 367: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "A1 Calender.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"A1 Calender.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="A1 Calender_linkInfo.xml" --use_hw_mpy=none --rom_model -o "A1 Calender.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "A1 Calender.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O0 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/A1 Calender" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> WaitForEnable
+   "../main.c"   ==> write_data
+   "../main.c"   ==> zifuchuan
+   "../main.c"   ==> write_com
+   "../main.c"   ==> Write1602
+   "../main.c"   ==> write_year
+   "../main.c"   ==> write_week
+   "../main.c"   ==> write_second
+   "../main.c"   ==> write_month
+   "../main.c"   ==> write_minute
+   "../main.c"   ==> write_hour
+   "../main.c"   ==> write_day
+   "../main.c"   ==> delay
+   "../main.c"   ==> Write_Byte
+   "../main.c"   ==> Read_Byte
+   "../main.c"   ==> read_1302add
+   "../main.c"   ==> readyear
+   "../main.c"   ==> readweek
+   "../main.c"   ==> readsecond
+   "../main.c"   ==> readminute
+   "../main.c"   ==> readhour
+   "../main.c"   ==> readday
+   "../main.c"   ==> readmonth
+   "../main.c"   ==> readtime
+   "../main.c"   ==> LcdReset
+   "../main.c"   ==> Write_dat
+   "../main.c"   ==> init_1302
+   "../main.c"   ==> main
+   "../main.c"   ==> Reset_DS1302
+   "../main.c"   ==> Delay5ms
+"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 169: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 174: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 191: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 327: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 334: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 342: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 343: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 350: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 351: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 358: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 359: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 366: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 367: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "A1 Calender.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O0 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"A1 Calender.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="A1 Calender_linkInfo.xml" --use_hw_mpy=none --rom_model -o "A1 Calender.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "A1 Calender.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "A1 Calender.hex"  "A1 Calender.out" 
+DEL /F "main.obj" 
+DEL /F "main.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O0 --opt_for_speed=0 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/A1 Calender" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> WaitForEnable
+   "../main.c"   ==> write_data
+   "../main.c"   ==> zifuchuan
+   "../main.c"   ==> write_com
+   "../main.c"   ==> Write1602
+   "../main.c"   ==> write_year
+   "../main.c"   ==> write_week
+   "../main.c"   ==> write_second
+   "../main.c"   ==> write_month
+   "../main.c"   ==> write_minute
+   "../main.c"   ==> write_hour
+   "../main.c"   ==> write_day
+   "../main.c"   ==> delay
+   "../main.c"   ==> Write_Byte
+   "../main.c"   ==> Read_Byte
+   "../main.c"   ==> read_1302add
+   "../main.c"   ==> readyear
+   "../main.c"   ==> readweek
+   "../main.c"   ==> readsecond
+   "../main.c"   ==> readminute
+   "../main.c"   ==> readhour
+   "../main.c"   ==> readday
+   "../main.c"   ==> readmonth
+   "../main.c"   ==> readtime
+   "../main.c"   ==> LcdReset
+   "../main.c"   ==> Write_dat
+   "../main.c"   ==> init_1302
+   "../main.c"   ==> main
+   "../main.c"   ==> Reset_DS1302
+   "../main.c"   ==> Delay5ms
+"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 169: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 174: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 191: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 327: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 334: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 342: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 343: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 350: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 351: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 358: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 359: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 366: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 367: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "A1 Calender.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O0 --opt_for_speed=0 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"A1 Calender.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="A1 Calender_linkInfo.xml" --use_hw_mpy=none --rom_model -o "A1 Calender.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "A1 Calender.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O0 --opt_for_speed=0 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/A1 Calender" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> WaitForEnable
+   "../main.c"   ==> write_data
+   "../main.c"   ==> zifuchuan
+   "../main.c"   ==> write_com
+   "../main.c"   ==> Write1602
+   "../main.c"   ==> write_year
+   "../main.c"   ==> write_week
+   "../main.c"   ==> write_second
+   "../main.c"   ==> write_month
+   "../main.c"   ==> write_minute
+   "../main.c"   ==> write_hour
+   "../main.c"   ==> write_day
+   "../main.c"   ==> delay
+   "../main.c"   ==> Write_Byte
+   "../main.c"   ==> Read_Byte
+   "../main.c"   ==> read_1302add
+   "../main.c"   ==> readyear
+   "../main.c"   ==> readweek
+   "../main.c"   ==> readsecond
+   "../main.c"   ==> readminute
+   "../main.c"   ==> readhour
+   "../main.c"   ==> readday
+   "../main.c"   ==> readmonth
+   "../main.c"   ==> readtime
+   "../main.c"   ==> LcdReset
+   "../main.c"   ==> Write_dat
+   "../main.c"   ==> init_1302
+   "../main.c"   ==> main
+   "../main.c"   ==> Reset_DS1302
+   "../main.c"   ==> Delay5ms
+"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 169: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 174: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 191: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 327: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 334: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 342: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 343: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 350: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 351: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 358: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 359: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 366: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 367: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "A1 Calender.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O0 --opt_for_speed=0 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"A1 Calender.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="A1 Calender_linkInfo.xml" --use_hw_mpy=none --rom_model -o "A1 Calender.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "A1 Calender.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/A1 Calender" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> WaitForEnable
+   "../main.c"   ==> write_data
+   "../main.c"   ==> zifuchuan
+   "../main.c"   ==> write_com
+   "../main.c"   ==> Write1602
+   "../main.c"   ==> write_year
+   "../main.c"   ==> write_week
+   "../main.c"   ==> write_second
+   "../main.c"   ==> write_month
+   "../main.c"   ==> write_minute
+   "../main.c"   ==> write_hour
+   "../main.c"   ==> write_day
+   "../main.c"   ==> delay
+   "../main.c"   ==> Write_Byte
+   "../main.c"   ==> Read_Byte
+   "../main.c"   ==> read_1302add
+   "../main.c"   ==> readyear
+   "../main.c"   ==> readweek
+   "../main.c"   ==> readsecond
+   "../main.c"   ==> readminute
+   "../main.c"   ==> readhour
+   "../main.c"   ==> readday
+   "../main.c"   ==> readmonth
+   "../main.c"   ==> readtime
+   "../main.c"   ==> LcdReset
+   "../main.c"   ==> Write_dat
+   "../main.c"   ==> init_1302
+   "../main.c"   ==> main
+   "../main.c"   ==> Reset_DS1302
+   "../main.c"   ==> Delay5ms
+"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 169: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 174: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 191: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 327: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 334: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 342: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 343: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 350: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 351: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 358: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 359: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 366: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 367: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "A1 Calender.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"A1 Calender.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="A1 Calender_linkInfo.xml" --use_hw_mpy=none --rom_model -o "A1 Calender.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "A1 Calender.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/A1 Calender" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> write_dat
+   "../main.c"   ==> write_com
+   "../main.c"   ==> LCD_init
+   "../main.c"   ==> main
+"../main.c", line 30: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 32: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 41: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 43: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 62: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 65: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 68: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 71: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 78: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+Finished building: "../main.c"
+ 
+Building target: "A1 Calender.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"A1 Calender.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="A1 Calender_linkInfo.xml" --use_hw_mpy=none --rom_model -o "A1 Calender.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "A1 Calender.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/A1 Calender" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> WaitForEnable
+   "../main.c"   ==> write_data
+   "../main.c"   ==> zifuchuan
+   "../main.c"   ==> write_com
+   "../main.c"   ==> Write1602
+   "../main.c"   ==> write_year
+   "../main.c"   ==> write_week
+   "../main.c"   ==> write_second
+   "../main.c"   ==> write_month
+   "../main.c"   ==> write_minute
+   "../main.c"   ==> write_hour
+   "../main.c"   ==> write_day
+   "../main.c"   ==> delay
+   "../main.c"   ==> Write_Byte
+   "../main.c"   ==> Read_Byte
+   "../main.c"   ==> read_1302add
+   "../main.c"   ==> readyear
+   "../main.c"   ==> readweek
+   "../main.c"   ==> readsecond
+   "../main.c"   ==> readminute
+   "../main.c"   ==> readhour
+   "../main.c"   ==> readday
+   "../main.c"   ==> readmonth
+   "../main.c"   ==> readtime
+   "../main.c"   ==> LcdReset
+   "../main.c"   ==> Write_dat
+   "../main.c"   ==> init_1302
+   "../main.c"   ==> main
+   "../main.c"   ==> Reset_DS1302
+   "../main.c"   ==> Delay5ms
+"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 169: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 174: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 191: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 327: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 334: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 342: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 343: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 350: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 351: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 358: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 359: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 366: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 367: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "A1 Calender.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"A1 Calender.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="A1 Calender_linkInfo.xml" --use_hw_mpy=none --rom_model -o "A1 Calender.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "A1 Calender.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/A1 Calender" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> WaitForEnable
+   "../main.c"   ==> write_data
+   "../main.c"   ==> zifuchuan
+   "../main.c"   ==> write_com
+   "../main.c"   ==> Write1602
+   "../main.c"   ==> write_year
+   "../main.c"   ==> write_week
+   "../main.c"   ==> write_second
+   "../main.c"   ==> write_month
+   "../main.c"   ==> write_minute
+   "../main.c"   ==> write_hour
+   "../main.c"   ==> write_day
+   "../main.c"   ==> delay
+   "../main.c"   ==> Write_Byte
+   "../main.c"   ==> Read_Byte
+   "../main.c"   ==> read_1302add
+   "../main.c"   ==> readyear
+   "../main.c"   ==> readweek
+   "../main.c"   ==> readsecond
+   "../main.c"   ==> readminute
+   "../main.c"   ==> readhour
+   "../main.c"   ==> readday
+   "../main.c"   ==> readmonth
+   "../main.c"   ==> readtime
+   "../main.c"   ==> LcdReset
+   "../main.c"   ==> Write_dat
+   "../main.c"   ==> init_1302
+   "../main.c"   ==> main
+   "../main.c"   ==> Reset_DS1302
+   "../main.c"   ==> Delay5ms
+"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 169: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 174: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 191: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 327: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 334: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 342: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 343: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 350: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 351: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 358: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 359: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 366: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 367: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "A1 Calender.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"A1 Calender.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="A1 Calender_linkInfo.xml" --use_hw_mpy=none --rom_model -o "A1 Calender.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "A1 Calender.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/A1 Calender" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> WaitForEnable
+   "../main.c"   ==> write_data
+   "../main.c"   ==> zifuchuan
+   "../main.c"   ==> write_com
+   "../main.c"   ==> Write1602
+   "../main.c"   ==> write_year
+   "../main.c"   ==> write_week
+   "../main.c"   ==> write_second
+   "../main.c"   ==> write_month
+   "../main.c"   ==> write_minute
+   "../main.c"   ==> write_hour
+   "../main.c"   ==> write_day
+   "../main.c"   ==> delay
+   "../main.c"   ==> Write_Byte
+   "../main.c"   ==> Read_Byte
+   "../main.c"   ==> read_1302add
+   "../main.c"   ==> readyear
+   "../main.c"   ==> readweek
+   "../main.c"   ==> readsecond
+   "../main.c"   ==> readminute
+   "../main.c"   ==> readhour
+   "../main.c"   ==> readday
+   "../main.c"   ==> readmonth
+   "../main.c"   ==> readtime
+   "../main.c"   ==> LcdReset
+   "../main.c"   ==> Write_dat
+   "../main.c"   ==> init_1302
+   "../main.c"   ==> main
+   "../main.c"   ==> Reset_DS1302
+   "../main.c"   ==> Delay5ms
+"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 169: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 174: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 191: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 327: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 334: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 342: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 343: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 350: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 351: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 358: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 359: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 366: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 367: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "A1 Calender.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"A1 Calender.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="A1 Calender_linkInfo.xml" --use_hw_mpy=none --rom_model -o "A1 Calender.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "A1 Calender.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --include_path="C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" --include_path="C:/0Practice/Hardware/MSP430/G2553/A1 Calender" --include_path="C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --verbose  "../main.c"
+MSP430 C/C++ Compiler                   v20.2.1.LTS
+Copyright (c) 2003-2018 Texas Instruments Incorporated
+   "../main.c"   ==> write_data
+   "../main.c"   ==> Write1602
+   "../main.c"   ==> delay
+   "../main.c"   ==> read_1302add
+   "../main.c"   ==> Write_dat
+   "../main.c"   ==> main
+"../main.c", line 42: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 42: remark #1527-D: (ULP 2.1) Detected SW delay loop using __no_operation. Recommend using a timer module instead
+"../main.c", line 68: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 169: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 174: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 191: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P2OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../main.c", line 326: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 327: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 334: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 342: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 343: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 350: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 351: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 358: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 359: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 366: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 367: remark #1530-D: (ULP 5.1) Detected modulo operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building target: "A1 Calender.out"
+Invoking: MSP430 Linker
+"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/bin/cl430" -vmsp -O4 --opt_for_speed=5 --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"A1 Calender.map" --heap_size=80 --stack_size=80 -i"C:/CCS/CCS_CODE/ccs/ccs_base/msp430/include" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/lib" -i"C:/CCS/CCS_CODE/ccs/tools/compiler/ti-cgt-msp430_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="A1 Calender_linkInfo.xml" --use_hw_mpy=none --rom_model -o "A1 Calender.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "A1 Calender.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project A1 Calender ****
+
+"C:\\CCS\\CCS_CODE\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'A1 Calender.out' is up to date.
+
+**** Build Finished ****

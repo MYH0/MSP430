@@ -1,12 +1,13 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:MSP430G2553.ccxml,org.eclipse.launchbar.core.descriptorType.default\:P0 Example,org.eclipse.launchbar.core.descriptorType.default\:P1 Blink LED2,org.eclipse.launchbar.core.descriptorType.default\:P2 TimerA Blink LED1,org.eclipse.launchbar.core.descriptorType.default\:P3 Keyboard_Independent,org.eclipse.launchbar.core.descriptorType.default\:P4 PWM Control LED2,org.eclipse.launchbar.core.descriptorType.default\:P5 Blink_LED1,org.eclipse.launchbar.core.descriptorType.default\:P5 WDT Blink_LED1,org.eclipse.launchbar.core.descriptorType.default\:P6 WD NMI Interrupt For LED2,org.eclipse.launchbar.core.descriptorType.default\:P7 WD PWM-Breath LED1,org.eclipse.launchbar.core.descriptorType.default\:P8 WDT Keyboard,org.eclipse.launchbar.core.descriptorType.default\:P9 WDT Long-Short Keyboard
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:MSP430G2553.ccxml,org.eclipse.launchbar.core.descriptorType.default\:A1 Calender,org.eclipse.launchbar.core.descriptorType.default\:P0 Example,org.eclipse.launchbar.core.descriptorType.default\:P1 Blink LED2,org.eclipse.launchbar.core.descriptorType.default\:P2 TimerA Blink LED1,org.eclipse.launchbar.core.descriptorType.default\:P3 Keyboard_Independent,org.eclipse.launchbar.core.descriptorType.default\:P4 PWM Control LED2,org.eclipse.launchbar.core.descriptorType.default\:P5 Blink_LED1,org.eclipse.launchbar.core.descriptorType.default\:P5 WDT Blink_LED1,org.eclipse.launchbar.core.descriptorType.default\:P6 WD NMI Interrupt For LED2,org.eclipse.launchbar.core.descriptorType.default\:P7 WD PWM-Breath LED1,org.eclipse.launchbar.core.descriptorType.default\:P8 WDT Keyboard,org.eclipse.launchbar.core.descriptorType.default\:P9 WDT Long-Short Keyboard
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:MSP430G2553.ccxml/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:MSP430G2553.ccxml/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:P0\ Example/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:P0\ Example/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:P10\ LCD1602/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:P2\ TimerA\ Blink\ LED1/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:P2\ TimerA\ Blink\ LED1/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:P7\ WD\ PWM-Breath\ LED1/activeLaunchMode=debug
